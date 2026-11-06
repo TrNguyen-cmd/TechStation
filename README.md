@@ -1,8 +1,8 @@
 Website này được thực hiện bởi:
-    Nguyễn Trọng Nguyễn
-    Lê Nữ Nhật Quỳnh
-    Phạm Khánh Duy
-Trên nền tảng OpenCart 4
+    - Nguyễn Trọng Nguyễn
+    - Lê Nữ Nhật Quỳnh
+    - Phạm Khánh Duy
+- Trên nền tảng OpenCart 4
 
 # TechStation - OpenCart 4 Docker Environment
 
