@@ -1,3 +1,9 @@
+Website này được thực hiện bởi:
+    Nguyễn Trọng Nguyễn
+    Lê Nữ Nhật Quỳnh
+    Phạm Khánh Duy
+Trên nền tảng OpenCart 4
+
 # TechStation - OpenCart 4 Docker Environment
 
 Dự án triển khai mã nguồn **OpenCart 4 (TechStation)** chạy trên nền tảng **Docker & Docker Compose**, được tối ưu hóa cấu trúc thư mục, quản lý biến môi trường qua `.env` và hỗ trợ MariaDB + phpMyAdmin.
