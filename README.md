@@ -1,4 +1,4 @@
-Website này được thực hiện bởi:
+Sinh viên thực hiện:
     - Nguyễn Trọng Nguyễn
     - Lê Nữ Nhật Quỳnh
     - Phạm Khánh Duy
