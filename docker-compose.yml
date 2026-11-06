@@ -1,0 +1,75 @@
+services:
+  opencart:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: opencart_app
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8081}:80"
+    environment:
+      HTTP_SERVER: ${HTTP_SERVER:-http://localhost:8081/}
+      HTTP_ADMIN: ${HTTP_ADMIN:-http://localhost:8081/QTV/}
+      DB_HOSTNAME: ${DB_HOST:-db}
+      DB_PORT: ${DB_PORT:-3306}
+      DB_DATABASE: ${DB_NAME:-techstation}
+      DB_USERNAME: ${DB_USER:-root}
+      DB_PASSWORD: ${DB_PASSWORD:-rootpassword}
+      DB_PREFIX: ${DB_PREFIX:-oc_}
+    volumes:
+      - ./TechStation:/var/www/html
+      - ./storage:/var/www/storage
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - opencart_net
+
+  db:
+    image: mariadb:10.11
+    container_name: opencart_db
+    restart: unless-stopped
+    ports:
+      - "${DB_PORT_EXTERNAL:-3307}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpassword}
+      MYSQL_DATABASE: ${DB_NAME:-techstation}
+      MYSQL_USER: ${MYSQL_USER:-techstation_user}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-techstation_password}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/init:/docker-entrypoint-initdb.d:ro
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-rootpassword}"]
+      interval: 3s
+      timeout: 3s
+      retries: 15
+      start_period: 10s
+    networks:
+      - opencart_net
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: opencart_pma
+    restart: unless-stopped
+    ports:
+      - "${PMA_PORT:-8082}:80"
+    environment:
+      PMA_HOST: ${DB_HOST:-db}
+      PMA_PORT: ${DB_PORT:-3306}
+      UPLOAD_LIMIT: 64M
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - opencart_net
+
+volumes:
+  db_data:
+
+networks:
+  opencart_net:
+    driver: bridge

@@ -1,0 +1,33 @@
+# Environment variables
+.env
+!.env.example
+
+# OpenCart cache, logs, sessions & uploads
+storage/cache/*
+!storage/cache/index.html
+storage/logs/*
+!storage/logs/index.html
+storage/session/*
+!storage/session/index.html
+storage/upload/*
+!storage/upload/index.html
+
+# OpenCart Image cache
+TechStation/image/cache/*
+!TechStation/image/cache/index.html
+
+# Database dumps / backups (trừ init gốc)
+database/backups/*
+*.sql.gz
+*.tar.gz
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

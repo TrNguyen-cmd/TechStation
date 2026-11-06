@@ -1,0 +1,25 @@
+<?php
+// Tiêu đề
+$_['heading_title'] = 'Bảo vệ tài khoản của bạn';
+
+// Văn bản
+$_['text_security'] = 'Bạn phải trả lời câu hỏi bảo mật bất cứ khi nào đăng nhập từ thiết bị hoặc máy tính lạ.';
+$_['text_code']     = 'Một email đã được gửi tới tài khoản email của bạn với mã bảo mật. Nhập mã vào ô bên dưới để tiếp tục.';
+$_['text_locked']   = 'Tài khoản của bạn đã bị khóa!';
+$_['text_unlock']   = 'Tài khoản của bạn đã bị khóa do nhập sai mã bảo mật quá nhiều lần. Nhấn vào nút đặt lại để nhận liên kết đặt lại qua email của bạn.';
+$_['text_unlocked'] = 'Thành công: Tài khoản của bạn đã được mở khóa!';
+$_['text_link']     = 'Thành công: Một email với liên kết đặt lại đã được gửi tới địa chỉ email của bạn!';
+$_['text_resend']   = 'Thành công: Một email đã được gửi tới tài khoản email của bạn với mã bảo mật!';
+
+// Mục nhập
+$_['entry_code']    = 'Mã bảo mật';
+
+// Lỗi
+$_['error_warning'] = 'Bạn đã vượt quá số lần thử mã bảo mật cho phép!';
+$_['error_code']    = 'Mã bảo mật không khớp!';
+$_['error_reset']   = 'Cảnh báo: Không thể đặt lại mã bảo mật của bạn!';
+$_['text_sent']    = 'Thành công: Một email đã được gửi đến tài khoản email của bạn kèm theo mã bảo mật!';
+$_['text_reset']   = 'Tài khoản của bạn đã bị khóa do nhập sai mã bảo mật nhiều lần. Nhấp vào nút đặt lại để nhận liên kết khôi phục qua email.';
+$_['text_failed']  = 'Không thể đặt lại mã bảo mật của bạn!';
+$_['button_send']  = 'Gửi';
+$_['button_reset'] = 'Đặt Lại';

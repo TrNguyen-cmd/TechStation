@@ -1,0 +1,36 @@
+<?php
+// Text
+$_['text_subject']               = '%s - Đơn hàng %s';
+$_['text_greeting']              = 'Cảm ơn bạn đã quan tâm đến sản phẩm của %s. Đơn hàng của bạn đã được nhận và sẽ được xử lý sau khi thanh toán được xác nhận.';
+$_['text_link']                  = 'Để xem đơn hàng của bạn, vui lòng nhấp vào liên kết dưới đây:';
+$_['text_order_detail']          = 'Chi tiết đơn hàng';
+$_['text_instruction']           = 'Hướng dẫn';
+$_['text_order_id']              = 'ID đơn hàng:';
+$_['text_date_added']            = 'Ngày thêm:';
+$_['text_order_status']          = 'Trạng thái đơn hàng:';
+$_['text_payment_method']        = 'Phương thức thanh toán:';
+$_['text_shipping_method']       = 'Phương thức vận chuyển:';
+$_['text_email']                 = 'E-mail:';
+$_['text_telephone']             = 'Điện thoại:';
+$_['text_ip']                    = 'Địa chỉ IP:';
+$_['text_payment_address']       = 'Địa chỉ thanh toán';
+$_['text_shipping_address']      = 'Địa chỉ giao hàng';
+$_['text_products']              = 'Sản phẩm';
+$_['text_product']               = 'Sản phẩm';
+$_['text_model']                 = 'Model';
+$_['text_quantity']              = 'Số lượng';
+$_['text_price']                 = 'Giá';
+$_['text_order_total']           = 'Tổng đơn hàng';
+$_['text_total']                 = 'Tổng cộng';
+$_['text_subscription']          = 'Đăng ký';
+$_['text_subscription_trial']    = '%s mỗi %d %s(s) trong %d lần thanh toán sau đó ';
+$_['text_subscription_duration'] = '%s mỗi %d %s(s) trong %d lần thanh toán';
+$_['text_subscription_cancel']   = '%s mỗi %d %s(s) cho đến khi hủy';
+$_['text_day']                   = 'ngày';
+$_['text_week']                  = 'tuần';
+$_['text_semi_month']            = 'nửa tháng';
+$_['text_month']                 = 'tháng';
+$_['text_year']                  = 'năm';
+$_['text_download']              = 'Sau khi thanh toán của bạn được xác nhận, bạn có thể nhấp vào liên kết dưới đây để truy cập vào các sản phẩm có thể tải về của bạn:';
+$_['text_comment']               = 'Các nhận xét cho đơn hàng của bạn là:';
+$_['text_footer']                = 'Vui lòng trả lời email này nếu bạn có bất kỳ câu hỏi nào.';

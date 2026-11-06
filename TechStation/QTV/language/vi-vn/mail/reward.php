@@ -1,0 +1,5 @@
+<?php
+// Văn bản
+$_['text_subject']  = '%s - Điểm thưởng';
+$_['text_received'] = 'Bạn đã nhận được %s điểm thưởng!';
+$_['text_total']    = 'Tổng số điểm thưởng của bạn hiện là %s.';

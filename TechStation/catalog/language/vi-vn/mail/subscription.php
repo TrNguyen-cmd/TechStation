@@ -1,0 +1,34 @@
+<?php
+// Văn bản
+$_['text_subject']               = '%s - Đăng Ký %s';
+$_['text_greeting']              = 'Cảm ơn bạn đã quan tâm đến sản phẩm %s của chúng tôi. Yêu cầu đăng ký của bạn đã được nhận và sẽ được xử lý sau khi thanh toán được xác nhận.';
+$_['text_link']                  = 'Để xem đăng ký của bạn, vui lòng nhấp vào liên kết dưới đây:';
+$_['text_promotion']             = 'Thành công: Một tính năng khuyến mãi đã được thêm thành công với đăng ký này!';
+$_['text_subscription_trial']    = '%s mỗi %d %s(s) cho %d thanh toán sau đó ';
+$_['text_subscription_duration'] = '%s mỗi %d %s(s) cho %d thanh toán';
+$_['text_subscription_cancel']   = '%s mỗi %d %s(s) cho đến khi hủy';
+$_['text_subscription_detail']   = 'Chi tiết Đăng ký';
+$_['text_instruction']           = 'Hướng dẫn';
+$_['text_orders_id']             = 'Mã Đơn Hàng:';
+$_['text_date_added']            = 'Ngày Thêm:';
+$_['text_order_status']          = 'Trạng Thái Đơn Hàng:';
+$_['text_payment_method']        = 'Phương Thức Thanh Toán:';
+$_['text_payment_address']       = 'Địa Chỉ Thanh Toán';
+$_['text_email']                 = 'E-mail:';
+$_['text_telephone']             = 'Điện Thoại:';
+$_['text_ip']                    = 'Địa chỉ IP:';
+$_['text_products']              = 'Sản Phẩm';
+$_['text_product']               = 'Sản Phẩm';
+$_['text_model']                 = 'Model';
+$_['text_quantity']              = 'Số Lượng';
+$_['text_price']                 = 'Giá';
+$_['text_order_total']           = 'Tổng Đơn Hàng';
+$_['text_total']                 = 'Tổng cộng';
+$_['text_comment']               = 'Các bình luận cho đăng ký của bạn là:';
+$_['text_description']           = 'Mô Tả';
+$_['text_day']                   = 'ngày';
+$_['text_week']                  = 'tuần';
+$_['text_semi_month']            = 'nửa tháng';
+$_['text_month']                 = 'tháng';
+$_['text_year']                  = 'năm';
+$_['text_footer']                = 'Vui lòng trả lời email này nếu bạn có bất kỳ câu hỏi nào.';

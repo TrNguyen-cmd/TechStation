@@ -1,0 +1,154 @@
+<?php
+// Heading
+$_['heading_title']              = 'Đơn hàng';
+
+// Text
+$_['text_success']               = 'Thành công: Bạn đã chỉnh sửa đơn hàng!';
+$_['text_list']                  = 'Danh sách Đơn hàng';
+$_['text_add']                   = 'Thêm Đơn hàng';
+$_['text_edit']                  = 'Đơn hàng (#%s)';
+$_['text_filter']                = 'Bộ lọc';
+$_['text_store']                 = 'Cửa hàng';
+$_['text_date_added']            = 'Ngày thêm';
+$_['text_customer']              = 'Khách hàng';
+$_['text_cart_add']              = 'Thêm mục';
+$_['text_product_add']           = 'Thêm sản phẩm';
+$_['text_voucher_add']           = 'Thêm phiếu quà tặng';
+$_['text_points']                = 'Điểm';
+$_['text_reward']                = 'Điểm thưởng';
+$_['text_reward_add']            = 'Thành công: Điểm thưởng đã được thêm!';
+$_['text_reward_remove']         = 'Thành công: Điểm thưởng đã được xóa!';
+$_['text_affiliate']             = 'Đối tác liên kết';
+$_['text_commission']            = 'Hoa hồng';
+$_['text_commission_add']        = 'Thành công: Hoa hồng đã được thêm!';
+$_['text_commission_remove']     = 'Thành công: Hoa hồng đã được xóa!';
+$_['text_restock']               = 'Thành công: Sản phẩm đã được nhập kho lại!';
+$_['text_upload']                = 'Tệp của bạn đã được tải lên thành công!';
+$_['text_subscription']          = 'Đăng ký';
+$_['text_subscription_trial']    = '%s mỗi %d %s(s) cho %d lần thanh toán, sau đó ';
+$_['text_subscription_duration'] = '%s mỗi %d %s(s) cho %d lần thanh toán';
+$_['text_subscription_cancel']   = '%s mỗi %d %s(s) cho đến khi hủy';
+$_['text_day']                   = 'ngày';
+$_['text_week']                  = 'tuần';
+$_['text_semi_month']            = 'một nửa tháng';
+$_['text_month']                 = 'tháng';
+$_['text_year']                  = 'năm';
+$_['text_more']                  = 'Thêm..';
+$_['text_less']                  = 'Ít hơn..';
+$_['text_payment_address']       = 'Địa chỉ thanh toán';
+$_['text_payment_method']        = 'Phương thức thanh toán';
+$_['text_payment']               = 'Vui lòng chọn phương thức thanh toán ưa thích để sử dụng cho đơn hàng này.';
+$_['text_shipping_address']      = 'Địa chỉ giao hàng';
+$_['text_shipping_method']       = 'Phương thức vận chuyển';
+$_['text_shipping']              = 'Vui lòng chọn phương thức vận chuyển ưa thích để sử dụng cho đơn hàng này.';
+$_['text_comment']               = 'Bình luận';
+$_['text_history']               = 'Lịch sử';
+$_['text_history_add']           = 'Thêm vào Lịch sử';
+$_['text_browser']               = 'Trình duyệt';
+$_['text_ip']                    = 'Địa chỉ IP';
+$_['text_forwarded_ip']          = 'IP đã chuyển tiếp';
+$_['text_user_agent']            = 'User Agent';
+$_['text_accept_language']       = 'Ngôn ngữ chấp nhận';
+$_['text_order_id']              = 'ID Đơn hàng';
+$_['text_website']               = 'Trang web';
+$_['text_invoice']               = 'Hóa đơn';
+$_['text_invoice_no']            = 'Số hóa đơn:';
+$_['text_store_address']         = 'Địa chỉ cửa hàng';
+$_['text_store_telephone']       = 'Điện thoại cửa hàng';
+$_['text_store_email']           = 'Email cửa hàng';
+$_['text_customer_email']        = 'Email khách hàng';
+$_['text_customer_telephone']    = 'Điện thoại khách hàng';
+$_['text_missing']               = 'Các đơn hàng bị thiếu';
+$_['text_default']               = 'Mặc định';
+$_['text_picklist']              = 'Ghi chú giao hàng';
+
+// Column
+$_['column_order_id']            = 'ID Đơn hàng';
+$_['column_customer']            = 'Khách hàng';
+$_['column_store']               = 'Cửa hàng';
+$_['column_status']              = 'Trạng thái';
+$_['column_date_added']          = 'Ngày thêm';
+$_['column_date_modified']       = 'Ngày sửa đổi';
+$_['column_total']               = 'Tổng cộng';
+$_['column_product']             = 'Sản phẩm';
+$_['column_model']               = 'Mẫu';
+$_['column_quantity']            = 'Số lượng';
+$_['column_price']               = 'Đơn giá';
+$_['column_comment']             = 'Bình luận';
+$_['column_notify']              = 'Thông báo cho khách hàng';
+$_['column_location']            = 'Vị trí';
+$_['column_reference']           = 'Tham chiếu';
+$_['column_weight']              = 'Trọng lượng sản phẩm';
+$_['column_action']              = 'Hành động';
+
+// Entry
+$_['entry_store']                = 'Cửa hàng';
+$_['entry_customer']             = 'Khách hàng';
+$_['entry_customer_group']       = 'Nhóm khách hàng';
+$_['entry_firstname']            = 'Tên';
+$_['entry_lastname']             = 'Họ';
+$_['entry_email']                = 'E-Mail';
+$_['entry_telephone']            = 'Điện thoại';
+$_['entry_address']              = 'Chọn địa chỉ';
+$_['entry_company']              = 'Công ty';
+$_['entry_address_1']            = 'Địa chỉ 1';
+$_['entry_address_2']            = 'Địa chỉ 2';
+$_['entry_city']                 = 'Thành phố';
+$_['entry_postcode']             = 'Mã bưu điện';
+$_['entry_country']              = 'Quốc gia';
+$_['entry_zone']                 = 'Khu vực / Tỉnh thành';
+$_['entry_product']              = 'Chọn sản phẩm';
+$_['entry_option']               = 'Chọn Tùy chọn';
+$_['entry_subscription']         = 'Chọn Đăng ký';
+$_['entry_quantity']             = 'Số lượng';
+$_['entry_to_name']              = 'Tên người nhận';
+$_['entry_to_email']             = 'E-mail người nhận';
+$_['entry_from_name']            = 'Tên người gửi';
+$_['entry_from_email']           = 'E-mail người gửi';
+$_['entry_theme']                = 'Chủ đề Phiếu quà tặng';
+$_['entry_message']              = 'Tin nhắn';
+$_['entry_amount']               = 'Số tiền';
+$_['entry_order_status']         = 'Trạng thái đơn hàng';
+$_['entry_notify']               = 'Thông báo cho khách hàng';
+$_['entry_override']             = 'Bỏ qua';
+$_['entry_comment']              = 'Bình luận';
+$_['entry_language']             = 'Ngôn ngữ';
+$_['entry_currency']             = 'Tiền tệ';
+$_['entry_affiliate']            = 'Đối tác liên kết';
+$_['entry_coupon']               = 'Phiếu giảm giá';
+$_['entry_voucher']              = 'Phiếu quà tặng';
+$_['entry_reward']               = 'Sử dụng điểm thưởng';
+$_['entry_shipping_method']      = 'Phương thức vận chuyển';
+$_['entry_payment_method']       = 'Phương thức thanh toán';
+$_['entry_order_id']             = 'ID Đơn hàng';
+$_['entry_total']                = 'Tổng cộng';
+$_['entry_date_from']            = 'Ngày từ';
+$_['entry_date_to']              = 'Ngày đến';
+
+// Help
+$_['help_override']              = 'Nếu đơn hàng của khách hàng bị chặn từ việc thay đổi trạng thái đơn hàng do mở rộng chống gian lận, bật tính năng bỏ qua.';
+
+// Error
+$_['error_warning']              = 'Cảnh báo: Vui lòng kiểm tra biểu mẫu cẩn thận để tìm lỗi!';
+$_['error_permission']           = 'Cảnh báo: Bạn không có quyền sửa đổi đơn hàng!';
+$_['error_invoice_no']           = 'Cảnh báo: Số hóa đơn đã được tạo!';
+$_['error_order']                = 'Cảnh báo: Đơn hàng không tồn tại!';
+$_['error_affiliate']            = 'Cảnh báo: Đối tác liên kết không tồn tại!';
+$_['error_reward_add']           = 'Cảnh báo: Điểm thưởng cho đơn hàng này đã được thêm!';
+$_['error_commission_add']       = '
+
+Cảnh báo: Hoa hồng cho đơn hàng này đã được thêm!';
+?>$_['text_model'] = 'Mã sản phẩm';
+$_['text_tbc']   = 'Chờ xác nhận';
+$_['text_sku']   = 'SKU';
+$_['text_upc']   = 'UPC';
+$_['text_ean']   = 'EAN';
+$_['text_jan']   = 'JAN';
+$_['text_isbn']  = 'ISBN';
+$_['text_mpn']   = 'MPN';
+$_['column_product_total'] = 'Số lượng sản phẩm';
+$_['column_model']         = 'Mã sản phẩm';
+$_['entry_order_id']       = 'Mã Đơn Hàng';
+$_['entry_date_modified_from'] = 'Ngày Sửa Từ';
+$_['entry_date_modified_to']   = 'Ngày Sửa Đến';
+$_['error_reward_guest']       = 'Cảnh báo: Khách vãng lai không thể sử dụng điểm thưởng!';
