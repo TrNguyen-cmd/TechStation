@@ -16,4 +16,4 @@ $_['text_account']      = 'Tài Khoản Của Tôi';
 $_['text_order']        = 'Lịch Sử Đơn Hàng';
 $_['text_wishlist']     = 'Danh Sách Yêu Thích';
 $_['text_newsletter']   = 'Bản Tin';
-$_['text_powered']      = 'Powered By <a href="https://gutech.vn">Thiết Kế Website Gutech.vn</a><br/> %s &copy; %s';
+$_['text_powered']      = 'Powered By <a href="https://techstation.site">Thiết Kế Website Techstation.site</a><br/> %s &copy; %s';

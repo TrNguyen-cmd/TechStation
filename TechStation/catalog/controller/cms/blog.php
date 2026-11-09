@@ -172,7 +172,22 @@ class Blog extends \Opencart\System\Engine\Controller {
 		$results = $this->model_cms_article->getArticles($filter_data);
 
 		foreach ($results as $result) {
-			$description = trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')));
+			$description = '';
+
+			if (!empty($result['meta_description'])) {
+				$description = trim(strip_tags(html_entity_decode($result['meta_description'], ENT_QUOTES, 'UTF-8')));
+			}
+
+			if (!$description) {
+				$description = html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8');
+				$description = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $description);
+				$description = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', '', $description);
+				$description = strip_tags($description);
+				$description = html_entity_decode($description, ENT_QUOTES, 'UTF-8');
+				$description = str_replace(["\xc2\xa0", '&nbsp;'], ' ', $description);
+				$description = preg_replace('/\s+/', ' ', $description);
+				$description = trim($description);
+			}
 
 			if (oc_strlen($description) > $this->config->get('config_article_description_length')) {
 				$description = oc_substr($description, 0, $this->config->get('config_article_description_length')) . '..';
