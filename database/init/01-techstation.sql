@@ -39,7 +39,7 @@ CREATE TABLE `oc_address` (
   `default` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`address_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,7 +49,8 @@ CREATE TABLE `oc_address` (
 LOCK TABLES `oc_address` WRITE;
 /*!40000 ALTER TABLE `oc_address` DISABLE KEYS */;
 INSERT INTO `oc_address` VALUES
-(1,1,'1','1','1','112','','Hồ chí Minh','72000',230,3780,'[]',1);
+(1,1,'1','1','1','112','','Hồ chí Minh','72000',230,3780,'[]',1),
+(2,9,'Nguyễn','Nguyễn','','39/13','','Hồ Chí Minh','61000',230,3780,'[]',1);
 /*!40000 ALTER TABLE `oc_address` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -743,7 +744,7 @@ CREATE TABLE `oc_cart` (
   `date_added` datetime DEFAULT NULL,
   PRIMARY KEY (`cart_id`),
   KEY `cart_id` (`customer_id`,`session_id`,`product_id`,`subscription_plan_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4225,7 +4226,7 @@ CREATE TABLE `oc_layout_module` (
   `position` varchar(14) DEFAULT NULL,
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4240,13 +4241,12 @@ INSERT INTO `oc_layout_module` VALUES
 (4,3,'opencart.banner.1','column_left',2),
 (7,3,'opencart.category','column_left',1),
 (8,14,'opencart.topic','column_left',1),
-(36,1,'opencart.banner.3','content_top',0),
-(37,1,'opencart.featured.2','content_top',1),
-(38,1,'opencart.featured.6','content_top',2),
-(39,1,'opencart.special.9','content_top',3),
-(40,1,'opencart.banner.4','content_bottom',0),
-(41,1,'opencart.blog.8','content_bottom',1),
-(42,1,'opencart.special.7','content_bottom',2);
+(43,1,'opencart.banner.3','content_top',0),
+(44,1,'opencart.featured.2','content_top',1),
+(45,1,'opencart.featured.6','content_top',2),
+(46,1,'opencart.special.9','content_top',3),
+(47,1,'opencart.banner.4','content_bottom',0),
+(48,1,'opencart.blog.8','content_bottom',1);
 /*!40000 ALTER TABLE `oc_layout_module` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4263,7 +4263,7 @@ CREATE TABLE `oc_layout_route` (
   `store_id` int(11) DEFAULT 0,
   `route` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4288,7 +4288,7 @@ INSERT INTO `oc_layout_route` VALUES
 (14,13,0,'product/search'),
 (15,14,0,'cms/blog'),
 (16,14,0,'cms/blog.info'),
-(22,1,0,'common/home');
+(23,1,0,'common/home');
 /*!40000 ALTER TABLE `oc_layout_route` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4943,7 +4943,7 @@ CREATE TABLE `oc_order` (
   `date_modified` datetime DEFAULT NULL,
   PRIMARY KEY (`order_id`),
   KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4959,7 +4959,8 @@ INSERT INTO `oc_order` VALUES
 (4,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost/TechStation/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"code\":\"bank_transfer.bank_transfer\",\"name\":\"Bank Transfer\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"code\":\"flat.flat\",\"name\":\"Flat Shipping Rate\",\"cost\":\"50000\",\"tax_class_id\":\"0\",\"text\":\"50,000\\u0111\"}','',23640000.0000,5,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'127.0.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0','en-US,en;q=0.9','2026-10-13 10:16:47','2026-10-13 10:16:47'),
 (5,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost:8081/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"name\":\"Bank Transfer\",\"code\":\"bank_transfer.bank_transfer\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"name\":\"Free Shipping\",\"code\":\"free.free\",\"cost\":0,\"tax_class_id\":0,\"text\":\"0\\u0111\"}','',31778998.9000,0,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'127.0.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0','en-US,en;q=0.9','2026-10-17 09:38:14','2026-10-27 19:48:48'),
 (6,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost:8081/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"code\":\"cod.cod\",\"name\":\"Cash On Delivery\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"code\":\"free.free\",\"name\":\"Free Shipping\",\"cost\":0,\"tax_class_id\":0,\"text\":\"0\\u0111\"}','',34089000.0000,0,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'172.19.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','vi,en;q=0.9,en-GB;q=0.8,en-US;q=0.7,vi-VN;q=0.6','2026-11-03 08:18:30','2026-11-03 08:18:30'),
-(7,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost:8081/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"code\":\"cod.cod\",\"name\":\"Cash On Delivery\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"code\":\"free.free\",\"name\":\"Free Shipping\",\"cost\":0,\"tax_class_id\":0,\"text\":\"0\\u0111\"}','',34089000.0000,2,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'172.19.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','vi,en;q=0.9,en-GB;q=0.8,en-US;q=0.7,vi-VN;q=0.6','2026-11-03 08:18:50','2026-11-03 08:18:50');
+(7,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost:8081/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"code\":\"cod.cod\",\"name\":\"Cash On Delivery\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"code\":\"free.free\",\"name\":\"Free Shipping\",\"cost\":0,\"tax_class_id\":0,\"text\":\"0\\u0111\"}','',34089000.0000,2,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'172.19.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','vi,en;q=0.9,en-GB;q=0.8,en-US;q=0.7,vi-VN;q=0.6','2026-11-03 08:18:50','2026-11-03 08:18:50'),
+(8,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost:8081/',9,2,'khach','bac','bac@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"code\":\"cod.cod\",\"name\":\"Thanh To\\u00e1n Khi Nh\\u1eadn H\\u00e0ng (COD)\"}',2,'Nguyễn','Nguyễn','','39/13','','Hồ Chí Minh','61000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"code\":\"free.free\",\"name\":\"Mi\\u1ec5n Ph\\u00ed V\\u1eadn Chuy\\u1ec3n\",\"cost\":0,\"tax_class_id\":0,\"text\":\"0\\u0111\"}','',30908898.9000,2,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'172.19.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0','vi,en;q=0.9,en-GB;q=0.8,en-US;q=0.7,vi-VN;q=0.6','2026-11-09 10:46:29','2026-11-09 10:46:29');
 /*!40000 ALTER TABLE `oc_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4978,7 +4979,7 @@ CREATE TABLE `oc_order_history` (
   `comment` text DEFAULT NULL,
   `date_added` datetime DEFAULT NULL,
   PRIMARY KEY (`order_history_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5006,7 +5007,8 @@ INSERT INTO `oc_order_history` VALUES
 (16,3,5,0,'','2026-10-27 19:50:19'),
 (17,3,5,0,'','2026-10-27 19:50:28'),
 (18,3,5,1,'','2026-10-27 19:50:39'),
-(19,7,2,0,'','2026-11-03 08:18:53');
+(19,7,2,0,'','2026-11-03 08:18:53'),
+(20,8,2,0,'','2026-11-09 10:46:30');
 /*!40000 ALTER TABLE `oc_order_history` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5027,7 +5029,7 @@ CREATE TABLE `oc_order_option` (
   `value` text DEFAULT NULL,
   `type` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`order_option_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5038,7 +5040,9 @@ LOCK TABLES `oc_order_option` WRITE;
 /*!40000 ALTER TABLE `oc_order_option` DISABLE KEYS */;
 INSERT INTO `oc_order_option` VALUES
 (5,5,10,233,41,'Ram','32GB','select'),
-(6,5,10,234,43,'Ổ cứng','128GB','select');
+(6,5,10,234,43,'Ổ cứng','128GB','select'),
+(7,8,13,229,27,'Ram','32GB','select'),
+(8,8,13,230,31,'Ổ cứng','512GB','select');
 /*!40000 ALTER TABLE `oc_order_option` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5063,7 +5067,7 @@ CREATE TABLE `oc_order_product` (
   `reward` int(8) DEFAULT 0,
   PRIMARY KEY (`order_product_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5079,7 +5083,8 @@ INSERT INTO `oc_order_product` VALUES
 (7,4,50,0,'Laptop ASUS VivoBook 14 X1407CA-LY008W','Laptop ASUS VivoBook 14 X1407CA-LY008W',1,23590000.0000,23590000.0000,0.0000,0),
 (10,5,50,0,'Laptop ASUS VivoBook 14 X1407CA-LY008W','asusVivobook14_2',1,28889999.0000,28889999.0000,2888999.9000,240),
 (11,6,55,0,'Laptop ASUS Zenbook 14 UX3405CA-ST1713W','asus-zenbook14-1',1,30990000.0000,30990000.0000,3099000.0000,310),
-(12,7,55,0,'Laptop ASUS Zenbook 14 UX3405CA-ST1713W','asus-zenbook14-1',1,30990000.0000,30990000.0000,3099000.0000,310);
+(12,7,55,0,'Laptop ASUS Zenbook 14 UX3405CA-ST1713W','asus-zenbook14-1',1,30990000.0000,30990000.0000,3099000.0000,310),
+(13,8,51,0,'Laptop ASUS Vivobook 14 X1404VA-EB355W','asusVivobook14_1',1,28098999.0000,28098999.0000,2809899.9000,220);
 /*!40000 ALTER TABLE `oc_order_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5192,7 +5197,7 @@ CREATE TABLE `oc_order_total` (
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`order_total_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5226,7 +5231,11 @@ INSERT INTO `oc_order_total` VALUES
 (41,7,'opencart','sub_total','Sub-Total',30990000.0000,1),
 (42,7,'opencart','shipping','Free Shipping',0.0000,3),
 (43,7,'opencart','tax','VAT 10%',3099000.0000,5),
-(44,7,'opencart','total','Total',34089000.0000,9);
+(44,7,'opencart','total','Total',34089000.0000,9),
+(45,8,'opencart','sub_total','Tạm Tính',28098999.0000,1),
+(46,8,'opencart','shipping','Miễn Phí Vận Chuyển',0.0000,3),
+(47,8,'opencart','tax','VAT 10%',2809899.9000,5),
+(48,8,'opencart','total','Tổng Cộng',30908898.9000,9);
 /*!40000 ALTER TABLE `oc_order_total` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5303,7 +5312,7 @@ INSERT INTO `oc_product` VALUES
 (48,0,'product 20','test 1','','','','','','test 2','','',995,5,'catalog/demo/ipod_classic_1.jpg',8,1,100.0000,0,9,'2009-02-08',1.00000000,1,0.00000000,0.00000000,0.00000000,2,1,1,0,0,0,'2009-02-08 17:21:51','2026-10-11 12:59:56'),
 (49,0,'SAM1','','','','','','','','','',50,8,'catalog/demo/samsung_tab_1.jpg',0,1,19990000.0000,0,9,'2011-04-25',0.00000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2011-04-26 08:57:34','2026-10-11 13:01:37'),
 (50,0,'asusVivobook14_2',NULL,NULL,NULL,NULL,NULL,NULL,'26 Phạm Văn Đồng - Hiệp Bình - Thủ Đức - Tp.Hồ Chí Minh','','',34,6,'catalog/Sản phẩm/Lap/Sp1/sp11.png',12,1,23590000.0000,24000,11,'2026-10-12',1.50000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-12 10:40:19','2026-10-15 15:39:30'),
-(51,0,'asusVivobook14_1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',32,6,'catalog/Sản phẩm/Lap/sp2/ssss_1__82 .png',12,1,22999000.0000,23999,11,'2026-10-13',1.40000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,2,1,'2026-10-13 09:25:42','2026-11-09 10:33:44'),
+(51,0,'asusVivobook14_1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',31,6,'catalog/Sản phẩm/Lap/sp2/ssss_1__82 .png',12,1,22999000.0000,23999,11,'2026-10-13',1.40000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,2,1,'2026-10-13 09:25:42','2026-11-09 10:33:44'),
 (53,0,'asusVivobook14_3',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',40,6,'catalog/Sản phẩm/test/x_m_2_43.webp',12,1,19499999.0000,19999,11,'2026-10-13',1.40000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-13 12:37:31','2026-11-03 09:56:16'),
 (54,0,'asus-tuf-gaming_1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',40,6,'catalog/Sản phẩm/Lap/sp4/sssxs_69.png',12,1,25999999.0000,26000,11,'2026-10-13',2.30000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,4,1,'2026-10-13 12:53:29','2026-10-15 15:38:45'),
 (55,0,'asus-zenbook14-1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',19,6,'catalog/Sản phẩm/Lap/sp5/x_m_6__66_1.png',12,1,30990000.0000,31000,11,'2026-10-13',1.20000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,5,1,'2026-10-13 13:21:22','2026-10-15 15:41:54'),
@@ -6677,11 +6686,11 @@ INSERT INTO `oc_product_option_value` VALUES
 (16,226,30,5,40,5,1,0.0000,'+',0,'+',0.00000000,'+'),
 (25,229,51,13,50,10,1,0.0000,'+',0,'+',0.00000000,'+'),
 (26,229,51,13,52,10,0,3999999.0000,'+',39,'+',0.00000000,'+'),
-(27,229,51,13,51,6,1,5999999.0000,'+',59,'+',0.00000000,'+'),
+(27,229,51,13,51,5,1,5999999.0000,'+',59,'+',0.00000000,'+'),
 (28,229,51,13,49,6,1,1999999.0000,'-',20,'-',0.00000000,'+'),
 (29,230,51,14,54,6,1,700000.0000,'-',7,'-',0.00000000,'+'),
 (30,230,51,14,53,10,1,350000.0000,'+',0,'+',0.00000000,'+'),
-(31,230,51,14,55,10,1,0.0000,'+',0,'+',0.00000000,'+'),
+(31,230,51,14,55,9,1,0.0000,'+',0,'+',0.00000000,'+'),
 (32,230,51,14,56,6,1,1399999.0000,'+',13,'+',0.00000000,'+'),
 (38,233,50,13,50,10,1,0.0000,'+',0,'+',0.00000000,'+'),
 (39,233,50,13,49,5,1,1999999.0000,'+',19,'-',0.00000000,'+'),
@@ -8230,10 +8239,11 @@ LOCK TABLES `oc_session` WRITE;
 /*!40000 ALTER TABLE `oc_session` DISABLE KEYS */;
 INSERT INTO `oc_session` VALUES
 ('4e991713697ed5b15280be9206','{\"currency\":\"vnd\"}','2026-11-10 03:11:09'),
-('50e1f961079b408e140ca3d3da','{\"currency\":\"vnd\",\"user_id\":\"1\",\"user_token\":\"f67dbc460c2cecac0fed16a3ebcf8427\",\"comment_token\":\"4b297dabedff70d23db81594ba2853a4\",\"customer_id\":\"9\",\"customer\":{\"customer_id\":\"9\",\"customer_group_id\":\"2\",\"firstname\":\"khach\",\"lastname\":\"bac\",\"email\":\"bac@gmail.com\",\"telephone\":\"\",\"custom_field\":[]},\"customer_token\":\"388ff3733d506904c1f87778af\"}','2026-11-10 03:41:33'),
+('50e1f961079b408e140ca3d3da','{\"currency\":\"vnd\",\"user_id\":\"1\",\"user_token\":\"f67dbc460c2cecac0fed16a3ebcf8427\",\"comment_token\":\"4b297dabedff70d23db81594ba2853a4\",\"customer_id\":\"9\",\"customer\":{\"customer_id\":\"9\",\"customer_group_id\":\"2\",\"firstname\":\"khach\",\"lastname\":\"bac\",\"email\":\"bac@gmail.com\",\"telephone\":\"\",\"custom_field\":[]},\"customer_token\":\"388ff3733d506904c1f87778af\",\"upload_token\":\"f48008dd9f762414fefeecb51d1d863b\",\"review_token\":\"a57788a6f90c3243c5c3feca2546b0c2\",\"shipping_address\":{\"zone\":\"Ho Chi Minh City\",\"zone_code\":\"HC\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"{firstname} {lastname}\\r\\n{company}\\r\\n{address_1}\\r\\n{address_2}\\r\\n{city}, {zone} {postcode}\\r\\n{country}\",\"custom_field\":[],\"address_id\":\"2\",\"customer_id\":\"9\",\"firstname\":\"Nguy\\u1ec5n\",\"lastname\":\"Nguy\\u1ec5n\",\"company\":\"\",\"address_1\":\"39\\/13\",\"address_2\":\"\",\"city\":\"H\\u1ed3 Ch\\u00ed Minh\",\"postcode\":\"61000\",\"country_id\":\"230\",\"zone_id\":\"3780\",\"default\":\"1\"}}','2026-11-10 03:46:44'),
+('5a088839cb42cb6da051ea3568','{\"currency\":\"vnd\"}','2026-11-10 03:41:53'),
 ('87f00468041e04cfcd9caafbf7','{\"currency\":\"vnd\"}','2026-11-10 03:13:22'),
 ('9d29110530bd7251ee0ebdada5','{\"currency\":\"vnd\"}','2026-11-10 03:41:01'),
-('d1781cc73badd244bdac6cf5de','{\"currency\":\"USD\"}','2026-11-10 03:13:41');
+('d1781cc73badd244bdac6cf5de','{\"currency\":\"USD\"}','2026-11-10 03:42:41');
 /*!40000 ALTER TABLE `oc_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8571,8 +8581,8 @@ CREATE TABLE `oc_statistics` (
 LOCK TABLES `oc_statistics` WRITE;
 /*!40000 ALTER TABLE `oc_statistics` DISABLE KEYS */;
 INSERT INTO `oc_statistics` VALUES
-(1,'order_sale',136747998.9000),
-(2,'order_processing',4.0000),
+(1,'order_sale',167656897.8000),
+(2,'order_processing',5.0000),
 (3,'order_complete',3.0000),
 (4,'order_other',0.0000),
 (5,'returns',0.0000),
@@ -21867,4 +21877,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-11-09  3:41:38
+-- Dump completed on 2026-11-09  3:51:00
