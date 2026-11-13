@@ -411,7 +411,7 @@ CREATE TABLE `oc_attribute` (
   `attribute_group_id` int(11) DEFAULT 0,
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`attribute_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -457,7 +457,8 @@ INSERT INTO `oc_attribute` VALUES
 (34,10,5),
 (37,12,0),
 (38,12,1),
-(39,12,2);
+(39,12,2),
+(40,12,0);
 /*!40000 ALTER TABLE `oc_attribute` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -556,7 +557,9 @@ INSERT INTO `oc_attribute_description` VALUES
 (38,1,'Keyboard light'),
 (38,2,'Đèn bàn phím'),
 (39,1,'Webcam'),
-(39,2,'Webcam');
+(39,2,'Webcam'),
+(40,1,'DPI'),
+(40,2,'DPI');
 /*!40000 ALTER TABLE `oc_attribute_description` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -571,7 +574,7 @@ CREATE TABLE `oc_attribute_group` (
   `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`attribute_group_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -684,7 +687,7 @@ CREATE TABLE `oc_banner_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`banner_image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=305 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=311 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -715,11 +718,12 @@ INSERT INTO `oc_banner_image` VALUES
 (297,6,1,'Laptop ASUS VivoBook 14 X1407CA-LY008W','index.php?route=product/product&amp;product_id=50&amp;path=64_66','catalog/Sản phẩm/Lap/Sp1/sp11.png',0),
 (298,9,2,'20/10','/index.php?route=product/category&amp;path=64','catalog/banner/1792772163495_8331940851636701357_g5775473049114127402_d3b73c48ee1fd3759ae611638f2e2f92.jpg',0),
 (299,9,1,'20/10','/index.php?route=product/category&amp;path=64','catalog/banner/1792772163495_8331940851636701357_g5775473049114127402_d3b73c48ee1fd3759ae611638f2e2f92.jpg',0),
-(300,7,2,'Laptop ASUS VivoBook 14 X1407CA-LY008W','/index.php?route=product/product&amp;product_id=50&amp;path=64_66','catalog/Sản phẩm/Lap/Sp1/sp1.png',0),
-(301,7,2,'MacBookAir','/index.php?route=product/product&amp;product_id=108&amp;path=64_69','catalog/Sản phẩm/Lap/sp12/macbook_air_15_relay_slide_1_7c3618691e.webp',1),
-(302,7,2,'ASUS TUF Gaming A15','/index.php?route=product/product&amp;product_id=54&amp;path=64_66','catalog/Sản phẩm/Lap/sp4/laptop_asus_tuf_gaming_a15_fa506ncg-hn329w_-_2.png',2),
-(303,7,1,'iPhone 6','index.php?route=product/product&amp;path=57&amp;product_id=49','catalog/demo/banners/iPhone6.jpg',0),
-(304,7,1,'MacBookAir','','catalog/demo/banners/MacBookAir.jpg',0);
+(305,7,2,'Laptop ASUS VivoBook 14 X1407CA-LY008W','/index.php?route=product/product&amp;product_id=50&amp;path=64_66','catalog/Sản phẩm/Lap/Sp1/sp1.png',0),
+(306,7,2,'MacBookAir','/index.php?route=product/product&amp;product_id=108&amp;path=64_69','catalog/Sản phẩm/Lap/sp12/macbook_air_15_relay_slide_1_7c3618691e.webp',1),
+(307,7,2,'ASUS TUF Gaming A15','/index.php?route=product/product&amp;product_id=54&amp;path=64_66','catalog/Sản phẩm/Lap/sp4/laptop_asus_tuf_gaming_a15_fa506ncg-hn329w_-_2.png',2),
+(308,7,1,'Laptop ASUS VivoBook 14 X1407CA-LY008W','/index.php?route=product/product&amp;product_id=50&amp;path=64_66','catalog/Sản phẩm/Lap/Sp1/sp1.png',0),
+(309,7,1,'MacBookAir','/index.php?route=product/product&amp;product_id=108&amp;path=64_69','catalog/Sản phẩm/Lap/sp11/macbook_air_15_relay_slide_1_89f987e429.webp',1),
+(310,7,1,'ASUS TUF Gaming A15','/index.php?route=product/product&amp;product_id=54&amp;path=64_66','catalog/Sản phẩm/Lap/sp4/laptop_asus_tuf_gaming_a15_fa506ncg-hn329w_-_2.png',0);
 /*!40000 ALTER TABLE `oc_banner_image` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2843,7 +2847,7 @@ CREATE TABLE `oc_customer_group` (
   `approval` int(1) DEFAULT 0,
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`customer_group_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2858,7 +2862,8 @@ INSERT INTO `oc_customer_group` VALUES
 (3,1,3),
 (4,1,4),
 (5,1,5),
-(6,1,0);
+(6,1,0),
+(9,1,6);
 /*!40000 ALTER TABLE `oc_customer_group` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2896,7 +2901,9 @@ INSERT INTO `oc_customer_group_description` VALUES
 (5,1,'Diamond','Diamond customer'),
 (5,2,'Kim Cương','Nhóm khách hàng kim cương'),
 (6,1,'Copper','Copper rank customer'),
-(6,2,'Đồng','Nhóm khách hàng hạng Đồng');
+(6,2,'Đồng','Nhóm khách hàng hạng Đồng'),
+(9,1,'Admontrator','Admintrator group'),
+(9,2,'Quản trị viên','Nhóm quản trị viên');
 /*!40000 ALTER TABLE `oc_customer_group_description` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4226,7 +4233,7 @@ CREATE TABLE `oc_layout_module` (
   `position` varchar(14) DEFAULT NULL,
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4246,7 +4253,8 @@ INSERT INTO `oc_layout_module` VALUES
 (45,1,'opencart.featured.6','content_top',2),
 (46,1,'opencart.special.9','content_top',3),
 (47,1,'opencart.banner.4','content_bottom',0),
-(48,1,'opencart.blog.8','content_bottom',1);
+(48,1,'opencart.blog.8','content_bottom',1),
+(50,11,'opencart.html.10','content_top',0);
 /*!40000 ALTER TABLE `oc_layout_module` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4263,7 +4271,7 @@ CREATE TABLE `oc_layout_route` (
   `store_id` int(11) DEFAULT 0,
   `route` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4278,7 +4286,6 @@ INSERT INTO `oc_layout_route` VALUES
 (3,10,0,'affiliate/%'),
 (4,3,0,'product/category'),
 (6,2,0,'product/product'),
-(7,11,0,'information/information'),
 (8,7,0,'checkout/%'),
 (9,8,0,'information/contact'),
 (10,9,0,'information/sitemap'),
@@ -4288,7 +4295,8 @@ INSERT INTO `oc_layout_route` VALUES
 (14,13,0,'product/search'),
 (15,14,0,'cms/blog'),
 (16,14,0,'cms/blog.info'),
-(23,1,0,'common/home');
+(23,1,0,'common/home'),
+(25,11,0,'information/information');
 /*!40000 ALTER TABLE `oc_layout_route` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4578,7 +4586,7 @@ CREATE TABLE `oc_module` (
   `code` varchar(64) DEFAULT NULL,
   `setting` text DEFAULT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4596,7 +4604,8 @@ INSERT INTO `oc_module` VALUES
 (6,'Sản phẩm nổi bật 2','opencart.featured','{\"name\":\"S\\u1ea3n ph\\u1ea9m n\\u1ed5i b\\u1eadt 2\",\"product\":[\"49\",\"73\",\"78\",\"80\",\"85\"],\"axis\":\"vertical\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\",\"module_id\":\"6\"}'),
 (7,'Khuyến mãi đặc biệt','opencart.special','{\"name\":\"Khuy\\u1ebfn m\\u00e3i \\u0111\\u1eb7c bi\\u1ec7t\",\"axis\":\"horizontal\",\"limit\":\"8\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\",\"module_id\":\"7\"}'),
 (8,'Bài viết','opencart.blog','{\"name\":\"B\\u00e0i vi\\u1ebft\",\"limit\":\"3\",\"width\":\"400\",\"height\":\"350\",\"order\":\"DESC\",\"sort\":\"ad.name\",\"status\":\"1\",\"module_id\":\"8\"}'),
-(9,'Giảm giá đặc biệt','opencart.special','{\"name\":\"Gi\\u1ea3m gi\\u00e1 \\u0111\\u1eb7c bi\\u1ec7t\",\"axis\":\"horizontal\",\"limit\":\"5\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\",\"module_id\":\"0\"}');
+(9,'Giảm giá đặc biệt','opencart.special','{\"name\":\"Gi\\u1ea3m gi\\u00e1 \\u0111\\u1eb7c bi\\u1ec7t\",\"axis\":\"horizontal\",\"limit\":\"5\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\",\"module_id\":\"0\"}'),
+(10,'Vị trí','opencart.html','{\"name\":\"V\\u1ecb tr\\u00ed\",\"module_description\":{\"2\":{\"title\":\"V\\u1ecb tr\\u00ed tr\\u00ean Google Map\",\"description\":\"&lt;p&gt;&lt;iframe allowfullscreen=&quot;&quot; height=&quot;450&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d3918.7780275481737!2d106.72417407435734!3d10.828291889323685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175262ba923c087%3A0x1721cec4c045d58a!2zxJAuIFPhu5EgMjMsIEhp4buHcCBCw6xuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1794313450963!5m2!1svi!2s&quot; style=&quot;border:0;&quot; width=&quot;600&quot;&gt;&lt;\\/iframe&gt;&lt;\\/p&gt;\"},\"1\":{\"title\":\"location on Google Maps\",\"description\":\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d3918.7780275481737!2d106.72417407435734!3d10.828291889323685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175262ba923c087%3A0x1721cec4c045d58a!2zxJAuIFPhu5EgMjMsIEhp4buHcCBCw6xuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1794313450963!5m2!1svi!2s&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot;&gt;&lt;\\/iframe&gt;\"}},\"status\":\"1\",\"module_id\":\"10\"}');
 /*!40000 ALTER TABLE `oc_module` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5282,7 +5291,7 @@ CREATE TABLE `oc_product` (
   `date_added` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5310,7 +5319,6 @@ INSERT INTO `oc_product` VALUES
 (46,0,'Product 19','','','','','','','','','',1000,5,'catalog/demo/sony_vaio_1.jpg',10,1,1000.0000,0,9,'2009-02-03',0.00000000,1,0.00000000,0.00000000,0.00000000,2,1,1,0,0,0,'2009-02-03 21:08:29','2026-10-11 13:01:52'),
 (47,0,'Product 21','','','','','','','','','',1000,5,'catalog/demo/hp_1.jpg',7,1,100.0000,400,9,'2009-02-03',1.00000000,1,0.00000000,0.00000000,0.00000000,1,0,1,0,0,0,'2009-02-03 21:08:40','2026-10-11 12:59:19'),
 (48,0,'product 20','test 1','','','','','','test 2','','',995,5,'catalog/demo/ipod_classic_1.jpg',8,1,100.0000,0,9,'2009-02-08',1.00000000,1,0.00000000,0.00000000,0.00000000,2,1,1,0,0,0,'2009-02-08 17:21:51','2026-10-11 12:59:56'),
-(49,0,'SAM1','','','','','','','','','',50,8,'catalog/demo/samsung_tab_1.jpg',0,1,19990000.0000,0,9,'2011-04-25',0.00000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2011-04-26 08:57:34','2026-10-11 13:01:37'),
 (50,0,'asusVivobook14_2',NULL,NULL,NULL,NULL,NULL,NULL,'26 Phạm Văn Đồng - Hiệp Bình - Thủ Đức - Tp.Hồ Chí Minh','','',34,6,'catalog/Sản phẩm/Lap/Sp1/sp11.png',12,1,23590000.0000,24000,11,'2026-10-12',1.50000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-12 10:40:19','2026-10-15 15:39:30'),
 (51,0,'asusVivobook14_1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',31,6,'catalog/Sản phẩm/Lap/sp2/ssss_1__82 .png',12,1,22999000.0000,23999,11,'2026-10-13',1.40000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,2,1,'2026-10-13 09:25:42','2026-11-09 10:33:44'),
 (53,0,'asusVivobook14_3',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',40,6,'catalog/Sản phẩm/test/x_m_2_43.webp',12,1,19499999.0000,19999,11,'2026-10-13',1.40000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-13 12:37:31','2026-11-03 09:56:16'),
@@ -5340,32 +5348,43 @@ INSERT INTO `oc_product` VALUES
 (84,0,'OPPO-FINDX9S-12-256','','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',25,5,'catalog/Sản phẩm/dth/sp17/oppo_find_x9s_tim_1_c0b45b6479.webp',14,1,25990000.0000,25990,11,'2026-10-16',200.00000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,17,1,'2026-10-16 20:05:07','2026-10-16 20:09:16'),
 (85,0,'OPPO-FINDX9U-12-512','','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',20,7,'catalog/Sản phẩm/dth/sp18/oppo_find_x9_ultra_cam_4_404c8e3fc4.webp',14,1,57990000.0000,57990,11,'2026-10-16',0.00000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,18,1,'2026-10-16 20:10:23','2026-10-16 20:15:13'),
 (86,0,'RENO15-5G-8-256','','','','','','','','','',30,7,'catalog/Sản phẩm/dth/sp19/oppo_reno15_trang_718392ac8e.webp',14,1,15990000.0000,15990,11,'2026-10-16',0.00000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,19,1,'2026-10-16 20:17:31','2026-10-16 20:22:01'),
-(87,0,'GAMING-HE01',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',30,7,'catalog/products/gaming-1.jpg',0,1,1490000.0000,1490,0,'2026-10-16',0.30000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(88,0,'GAMING-HE02',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',25,7,'catalog/products/gaming-2.jpg',0,1,2290000.0000,2290,0,'2026-10-16',0.35000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(89,0,'GAMING-HE03',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',20,7,'catalog/products/gaming-3.jpg',0,1,3490000.0000,3490,0,'2026-10-16',0.28000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(90,0,'GAMING-HE04',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',15,7,'catalog/products/gaming-4.jpg',0,1,990000.0000,990,0,'2026-10-16',0.32000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(91,0,'GAMING-HE05',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',40,7,'catalog/products/gaming-5.jpg',0,1,4990000.0000,4990,0,'2026-10-16',0.25000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(92,0,'NORMAL-TN01',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',50,7,'catalog/products/normal-1.jpg',0,1,490000.0000,490,0,'2026-10-16',0.15000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(93,0,'NORMAL-TN02',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',60,7,'catalog/products/normal-2.jpg',0,1,790000.0000,790,0,'2026-10-16',0.18000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(94,0,'NORMAL-TN03',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',35,7,'catalog/products/normal-3.jpg',0,1,1290000.0000,1290,0,'2026-10-16',0.20000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(95,0,'NORMAL-TN04',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',45,7,'catalog/products/normal-4.jpg',0,1,1890000.0000,1890,0,'2026-10-16',0.12000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(96,0,'NORMAL-TN05',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',25,7,'catalog/products/normal-5.jpg',0,1,2590000.0000,2590,0,'2026-10-16',0.22000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
-(97,0,'LOGI-G102-GEN2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',50,7,'catalog/products/logitech-g102.jpg',0,1,490000.0000,490,0,'2026-10-16',0.08500000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-10-16 20:39:34'),
-(98,0,'RAZER-DEATH-V2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',30,7,'catalog/products/razer-deathadder-v2.jpg',0,1,890000.0000,890,0,'2026-10-16',0.08200000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-10-16 20:39:34'),
-(99,0,'LOGI-G402-HYP',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',25,7,'catalog/products/logitech-g402.jpg',0,1,690000.0000,690,0,'2026-10-16',0.14400000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-10-16 20:39:34'),
-(100,0,'ZOWIE-EC2-C',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',20,7,'catalog/products/zowie-ec2c.jpg',0,1,1590000.0000,1590,0,'2026-10-16',0.07300000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-10-16 20:39:34'),
+(87,0,'GAMING-HE01',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',30,7,'catalog/Sản phẩm/tai nghe/razer-blackshark-v2-x/img_1.jpg',0,1,1490000.0000,1490,0,'2026-10-16',0.30000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(88,0,'GAMING-HE02',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',25,7,'catalog/Sản phẩm/tai nghe/logitech-g733-lightspeed/img_1.jpg',0,1,2290000.0000,2290,0,'2026-10-16',0.35000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(89,0,'GAMING-HE03',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',20,7,'catalog/Sản phẩm/tai nghe/hyperx-cloud-iii-wireless/img_1.jpg',0,1,3490000.0000,3490,0,'2026-10-16',0.28000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(90,0,'GAMING-HE04',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',15,7,'catalog/Sản phẩm/tai nghe/asus-tuf-gaming-h1/img_1.jpg',0,1,990000.0000,990,0,'2026-10-16',0.32000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(91,0,'GAMING-HE05',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',40,7,'catalog/Sản phẩm/tai nghe/steelseries-arctis-nova-pro/img_1.jpg',0,1,4990000.0000,4990,0,'2026-10-16',0.25000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(92,0,'NORMAL-TN01',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',50,7,'catalog/Sản phẩm/tai nghe/remax-rm-510/img_1.jpg',0,1,490000.0000,490,0,'2026-10-16',0.15000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(93,0,'NORMAL-TN02',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',60,7,'catalog/Sản phẩm/tai nghe/baseus-encok-d02-pro/img_1.jpg',0,1,790000.0000,790,0,'2026-10-16',0.18000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(94,0,'NORMAL-TN03',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',35,7,'catalog/Sản phẩm/tai nghe/sony-wh-ch520/img_1.jpg',0,1,1290000.0000,1290,0,'2026-10-16',0.20000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(95,0,'NORMAL-TN04',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',45,7,'catalog/Sản phẩm/tai nghe/haylou-gt1-pro/img_1.jpg',0,1,1890000.0000,1890,0,'2026-10-16',0.12000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(96,0,'NORMAL-TN05',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',25,7,'catalog/Sản phẩm/tai nghe/jbl-tune-720bt/img_1.jpg',0,1,2590000.0000,2590,0,'2026-10-16',0.22000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:32:32','2026-10-16 20:32:32'),
+(97,0,'LOGI-G102-GEN2',NULL,NULL,NULL,NULL,NULL,NULL,'','','',50,7,'catalog/Sản phẩm/Chuột/sp4/chuot-choi-game-co-day-logitech-g102-lightsync-8000dpi-1_1_2.webp',0,1,490000.0000,490,11,'2026-10-16',0.08500000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-10 11:52:46'),
+(98,0,'RAZER-DEATH-V2',NULL,NULL,NULL,NULL,NULL,NULL,'','','',30,7,'catalog/Sản phẩm/Chuột/sp5/_0003_vp34v9i-wojscx5wmt3ccmrwoxsmyi7v.webp',0,1,890000.0000,890,0,'2026-10-16',0.08200000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-10 11:58:59'),
+(99,0,'LOGI-G402-HYP',NULL,NULL,NULL,NULL,NULL,NULL,'','','',25,7,'catalog/Sản phẩm/Chuột/sp5/logitech-g402-hyperion-fury-ultra-1.webp',0,1,690000.0000,690,11,'2026-10-16',0.14400000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-10 11:57:01'),
+(100,0,'ZOWIE-EC2-C',NULL,NULL,NULL,NULL,NULL,NULL,'','','',20,7,'catalog/Sản phẩm/Chuột/sp7/sg-11134201-7rfgy-m3efjsfasyiu25.webp',0,1,1590000.0000,1590,0,'2026-10-16',0.07300000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-10 12:01:52'),
 (101,0,'CORSAIR-M65-RGB',NULL,NULL,NULL,NULL,NULL,NULL,'','','',15,7,'catalog/Sản phẩm/Chuột/sp3/unnamed (1).webp',0,1,1290000.0000,1290,0,'2026-10-16',0.09700000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-09 10:25:01'),
-(102,0,'LOGI-MX-MASTER3S',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',40,7,'catalog/products/mx-master-3s.jpg',0,1,2490000.0000,2490,0,'2026-10-16',0.14100000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-10-16 20:39:34'),
+(102,0,'LOGI-MX-MASTER3S',NULL,NULL,NULL,NULL,NULL,NULL,'','','',40,7,'catalog/Sản phẩm/Chuột/sp8/1_346.webp',0,1,2490000.0000,2490,0,'2026-10-16',0.14100000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-10 12:07:03'),
 (103,0,'LOGI-PEBBLE-M350',NULL,NULL,NULL,NULL,NULL,NULL,'','','',60,7,'catalog/Sản phẩm/Chuột/sp1/group_85_2_.webp',0,1,390000.0000,390,11,'2026-10-16',0.10000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-09 10:19:36'),
-(104,0,'MICROSOFT-BLUETOOTH',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',35,7,'catalog/products/ms-bluetooth.jpg',0,1,590000.0000,590,0,'2026-10-16',0.07800000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-10-16 20:39:34'),
-(105,0,'RAZER-PRO-CLICK-MINI',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',20,7,'catalog/products/razer-pro-mini.jpg',0,1,1390000.0000,1390,0,'2026-10-16',0.11100000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-10-16 20:39:34'),
+(104,0,'MICROSOFT-BLUETOOTH',NULL,NULL,NULL,NULL,NULL,NULL,'','','',35,7,'catalog/Sản phẩm/Chuột/sp9/screenshot_32-removebg-preview.webp',0,1,590000.0000,590,11,'2026-10-16',0.07800000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-10 12:10:03'),
+(105,0,'RAZER-PRO-CLICK-MINI',NULL,NULL,NULL,NULL,NULL,NULL,'','','',20,7,'catalog/Sản phẩm/Chuột/sp9/rgr556.webp',0,1,1390000.0000,1390,0,'2026-10-16',0.11100000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-10 12:06:26'),
 (106,0,'ASUS-ROG-STRIX-CARRY',NULL,NULL,NULL,NULL,NULL,NULL,'','','',25,7,'catalog/Sản phẩm/Chuột/sp2/fwebp.webp',0,1,1190000.0000,1190,0,'2026-10-16',0.07200000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 20:39:34','2026-11-09 10:22:17'),
 (107,0,'MAC-NEO13-8-256',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',20,7,'catalog/Sản phẩm/Lap/sp12/macbook_air_13_m5_midnight_1_e082295c06.webp',0,1,22990000.0000,22990,11,'2026-10-16',1.22000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,12,1,'2026-10-16 21:40:47','2026-10-16 21:50:16'),
 (108,0,'MAC-AIR13-M5',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',25,5,'catalog/Sản phẩm/Lap/sp11/macbook_air_15_m5_midnight_1_abeef30384.webp',0,1,28990000.0000,28990,11,'2026-10-16',1.24000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 21:40:47','2026-10-16 21:45:44'),
 (109,0,'MAC-PRO14-M5',NULL,NULL,NULL,NULL,NULL,NULL,'','','',15,7,'catalog/Sản phẩm/Lap/sp14/macbook_pro_14_m5_2025_bac_1_f121a47038.webp',8,1,39990000.0000,39990,11,'2026-10-16',1.55000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,13,1,'2026-10-16 21:40:47','2026-10-16 21:53:37'),
 (110,0,'MAC-PRO16-M5PRO',NULL,NULL,NULL,NULL,NULL,NULL,'','','',10,7,'catalog/Sản phẩm/Lap/sp15/macbook_pro_16_m5_pro_silver_1_66e42dbee8.webp',0,1,59990000.0000,59990,0,'2026-10-16',2.14000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-16 21:40:47','2026-10-16 21:56:13'),
-(111,0,'IPAD-M4-11',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',50,7,'catalog/demo/apple_cinema_30.jpg',0,1,26990000.0000,0,0,'2026-01-01',0.00000000,0,0.00000000,0.00000000,0.00000000,0,1,1,0,0,1,'2026-10-27 13:41:39','2026-10-27 13:41:39'),
-(112,0,'XIAOMI-PAD6',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',50,7,'catalog/demo/samsung_tab_1.jpg',0,1,7490000.0000,0,0,'2026-01-01',0.00000000,0,0.00000000,0.00000000,0.00000000,0,1,1,0,0,1,'2026-10-27 13:41:39','2026-10-27 13:41:39');
+(112,0,'XIAOMI-PAD6',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','',50,7,'catalog/demo/samsung_tab_1.jpg',0,1,7490000.0000,0,0,'2026-01-01',0.00000000,0,0.00000000,0.00000000,0.00000000,0,1,1,0,0,1,'2026-10-27 13:41:39','2026-10-27 13:41:39'),
+(113,0,'TAB-S10-ULTRA','TAB-S10-ULTRA','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/samsung-galaxy-tab-s10-ultra/samsung_galaxy_tab_s10_ultra_-_2.webp',15,1,30990000.0000,30990,11,'2026-11-10',0.72300000,1,32.60000000,20.80000000,0.54000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 20:08:35'),
+(114,0,'TAB-S9-FE-PLUS','TAB-S9-FE-PLUS','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/samsung-galaxy-tab-s9-fe-plus/img_1.jpg',15,1,13990000.0000,13990,11,'2026-11-10',0.62700000,1,28.50000000,18.50000000,0.65000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04'),
+(115,0,'TAB-A9-PLUS','TAB-A9-PLUS','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/samsung-galaxy-tab-a9-plus/img_1.jpg',15,1,5490000.0000,5490,11,'2026-11-10',0.48000000,1,25.70000000,16.80000000,0.69000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04'),
+(116,0,'IPAD-PRO-M4-11','IPAD-PRO-M4-11','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/ipad-pro-m4-11/img_3.jpg',8,1,28990000.0000,28990,11,'2026-11-10',0.44400000,1,24.90000000,17.70000000,0.53000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 20:12:49'),
+(117,0,'IPAD-AIR-M2-11','IPAD-AIR-M2-11','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/ipad-air-m2-11/img_1.jpg',8,1,16990000.0000,16990,11,'2026-11-10',0.46200000,1,24.70000000,17.80000000,0.61000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04'),
+(118,0,'IPAD-GEN-10','IPAD-GEN-10','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/ipad-gen-10/img_1.jpg',8,1,9990000.0000,9990,11,'2026-11-10',0.47700000,1,24.80000000,17.90000000,0.70000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04'),
+(119,0,'LEGION-Y700-G2','LEGION-Y700-G2','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/lenovo-legion-y700-gen-2/img_1.jpg',13,1,8990000.0000,8990,11,'2026-11-10',0.34800000,1,20.80000000,12.90000000,0.76000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04'),
+(120,0,'LENOVO-TAB-P12','LENOVO-TAB-P12','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/lenovo-tab-p12/img_1.jpg',13,1,7990000.0000,7990,11,'2026-11-10',0.61500000,1,29.30000000,19.10000000,0.69000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04'),
+(121,0,'LENOVO-TAB-M11','LENOVO-TAB-M11','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/lenovo-tab-m11/img_1.jpg',13,1,4490000.0000,4490,11,'2026-11-10',0.46500000,1,25.50000000,16.60000000,0.71000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04'),
+(122,0,'XIAOMI-PAD-6S-PRO','XIAOMI-PAD-6S-PRO','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/xiaomi-pad-6s-pro/img_1.jpg',16,1,14490000.0000,14490,11,'2026-11-10',0.59000000,1,27.80000000,19.10000000,0.62000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04'),
+(123,0,'XIAOMI-PAD-6','XIAOMI-PAD-6','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/xiaomi-pad-6/img_1.jpg',16,1,7990000.0000,7990,11,'2026-11-10',0.49000000,1,25.40000000,16.50000000,0.65000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04'),
+(124,0,'REDMI-PAD-PRO','REDMI-PAD-PRO','','','','','','12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',50,7,'catalog/Sản phẩm/May tinh bang/xiaomi-redmi-pad-pro/img_1.jpg',16,1,6490000.0000,6490,11,'2026-11-10',0.57100000,1,28.00000000,18.20000000,0.75000000,1,1,1,5,0,1,'2026-11-10 13:00:04','2026-11-10 13:00:04');
 /*!40000 ALTER TABLE `oc_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6014,17 +6033,26 @@ INSERT INTO `oc_product_attribute` VALUES
 (94,24,2,'DSEE Digital Sound Enhancement Engine'),
 (95,24,2,'AAC Audio Codec'),
 (96,24,2,'JBL Pure Bass Sound'),
-(97,24,2,'Cảm biến quang học 8000 DPI'),
-(98,24,2,'Cảm biến Focus+ 20K DPI'),
-(99,24,2,'Fusion Engine tốc độ cao'),
-(100,24,2,'Cảm biến 3360 thiết kế công thái học'),
+(97,24,1,'8000 DPI'),
+(97,24,2,'8000 DPI'),
+(97,29,1,'USB'),
+(97,29,2,'Dây kết nối USB'),
+(98,24,1,'20000DPI'),
+(98,24,2,'20000DPI'),
+(99,40,1,'240 - 4000 DPI'),
+(99,40,2,'240 - 4000 DPI'),
+(100,40,1,'400 / 800 / 1600 / 3200'),
+(100,40,2,'400 / 800 / 1600 / 3200'),
 (101,14,1,'18.000 DPI'),
 (101,14,2,'18.000 DPI'),
-(102,24,2,'Darkfield Laser 8000 DPI (hoạt động trên kính)'),
+(102,40,1,'200-8000 DPI'),
+(102,40,2,'200-8000 DPI'),
 (103,34,1,'Pin AA, 18 tháng'),
 (103,34,2,'Pin AA, 18 tháng'),
-(104,24,2,'BlueTrack Technology'),
-(105,24,2,'Cảm biến quang học 12.000 DPI'),
+(104,40,1,'1000 DPI'),
+(104,40,2,'1000 DPI'),
+(105,40,1,'12000 DPI'),
+(105,40,2,'12000 DPI'),
 (106,34,1,'300+ Hours'),
 (106,34,2,'300+ giờ'),
 (107,17,1,''),
@@ -6056,7 +6084,223 @@ INSERT INTO `oc_product_attribute` VALUES
 (110,19,1,''),
 (110,19,2,'48GB'),
 (110,20,1,''),
-(110,20,2,'1TB SSD');
+(110,20,2,'1TB SSD'),
+(113,12,1,'14.6 inch Dynamic AMOLED 2X (2960 x 1848)'),
+(113,12,2,'14.6 inch Dynamic AMOLED 2X (2960 x 1848)'),
+(113,15,1,'120Hz'),
+(113,15,2,'120Hz'),
+(113,17,1,'MediaTek Dimensity 9300+ (4nm)'),
+(113,17,2,'MediaTek Dimensity 9300+ (4nm)'),
+(113,18,1,'Immortalis-G720 MC12'),
+(113,18,2,'Immortalis-G720 MC12'),
+(113,19,1,'12GB LPDDR5X'),
+(113,19,2,'12GB LPDDR5X'),
+(113,20,1,'256GB / 512GB / 1TB UFS 4.0'),
+(113,20,2,'256GB / 512GB / 1TB UFS 4.0'),
+(113,22,1,'13MP + 8MP (Ultrawide)'),
+(113,22,2,'13MP + 8MP (Góc siêu rộng)'),
+(113,23,1,'12MP (Wide) + 12MP (Ultrawide)'),
+(113,23,2,'12MP (Góc rộng) + 12MP (Góc siêu rộng)'),
+(113,34,1,'11,200 mAh, 45W fast charging'),
+(113,34,2,'11,200 mAh, sạc nhanh 45W'),
+(114,12,1,'12.4 inch IPS LCD (2560 x 1600)'),
+(114,12,2,'12.4 inch IPS LCD (2560 x 1600)'),
+(114,15,1,'90Hz'),
+(114,15,2,'90Hz'),
+(114,17,1,'Exynos 1380 (5nm)'),
+(114,17,2,'Exynos 1380 (5nm)'),
+(114,18,1,'Mali-G68 MP5'),
+(114,18,2,'Mali-G68 MP5'),
+(114,19,1,'8GB'),
+(114,19,2,'8GB'),
+(114,20,1,'128GB / 256GB'),
+(114,20,2,'128GB / 256GB'),
+(114,22,1,'8MP (Wide) + 8MP (Ultrawide)'),
+(114,22,2,'8MP (Góc rộng) + 8MP (Góc siêu rộng)'),
+(114,23,1,'12MP (Ultrawide)'),
+(114,23,2,'12MP (Góc siêu rộng)'),
+(114,34,1,'10,090 mAh, 45W fast charging'),
+(114,34,2,'10,090 mAh, sạc nhanh 45W'),
+(115,12,1,'11.0 inch TFT LCD (1920 x 1200)'),
+(115,12,2,'11.0 inch TFT LCD (1920 x 1200)'),
+(115,15,1,'90Hz'),
+(115,15,2,'90Hz'),
+(115,17,1,'Qualcomm Snapdragon 695 5G (6nm)'),
+(115,17,2,'Qualcomm Snapdragon 695 5G (6nm)'),
+(115,18,1,'Adreno 619'),
+(115,18,2,'Adreno 619'),
+(115,19,1,'4GB / 8GB'),
+(115,19,2,'4GB / 8GB'),
+(115,20,1,'64GB / 128GB'),
+(115,20,2,'64GB / 128GB'),
+(115,22,1,'8MP AF'),
+(115,22,2,'8MP tự động lấy nét'),
+(115,23,1,'5MP'),
+(115,23,2,'5MP'),
+(115,34,1,'7,040 mAh, 15W charging'),
+(115,34,2,'7,040 mAh, sạc nhanh 15W'),
+(116,12,1,'11.0 inch Ultra Retina XDR Tandem OLED (2420 x 1668)'),
+(116,12,2,'11.0 inch Ultra Retina XDR Tandem OLED (2420 x 1668)'),
+(116,15,1,'120Hz ProMotion'),
+(116,15,2,'120Hz ProMotion'),
+(116,17,1,'Apple M4 (9-core / 10-core CPU, 16-core Neural Engine)'),
+(116,17,2,'Apple M4 (9-core / 10-core CPU, 16-core Neural Engine)'),
+(116,18,1,'Apple M4 10-core GPU (Hardware-accelerated Ray Tracing)'),
+(116,18,2,'Apple M4 10-core GPU (Dò tia phần cứng Ray Tracing)'),
+(116,19,1,'8GB / 16GB Unified Memory'),
+(116,19,2,'8GB / 16GB Unified Memory'),
+(116,20,1,'256GB / 512GB / 1TB NVMe'),
+(116,20,2,'256GB / 512GB / 1TB NVMe'),
+(116,22,1,'12MP Wide, LiDAR Scanner, True Tone Flash'),
+(116,22,2,'12MP Wide, cảm biến LiDAR Scanner, Flash True Tone'),
+(116,23,1,'12MP Landscape TrueDepth Center Stage'),
+(116,23,2,'12MP TrueDepth Center Stage đặt ngang'),
+(116,34,1,'8,160 mAh (31.29 Wh), 30W charging'),
+(116,34,2,'8,160 mAh (31.29 Wh), sạc nhanh 30W'),
+(117,12,1,'11.0 inch Liquid Retina IPS LCD (2360 x 1640)'),
+(117,12,2,'11.0 inch Liquid Retina IPS LCD (2360 x 1640)'),
+(117,15,1,'60Hz'),
+(117,15,2,'60Hz'),
+(117,17,1,'Apple M2 (8-core CPU)'),
+(117,17,2,'Apple M2 (8-core CPU)'),
+(117,18,1,'Apple M2 9-core GPU'),
+(117,18,2,'Apple M2 9-core GPU'),
+(117,19,1,'8GB Unified Memory'),
+(117,19,2,'8GB Unified Memory'),
+(117,20,1,'128GB / 256GB / 512GB NVMe'),
+(117,20,2,'128GB / 256GB / 512GB NVMe'),
+(117,22,1,'12MP Wide, Smart HDR 4, 4K video'),
+(117,22,2,'12MP Wide, Smart HDR 4, quay phim 4K'),
+(117,23,1,'12MP Landscape Ultra Wide with Center Stage'),
+(117,23,2,'12MP Ultra Wide đặt ngang với Center Stage'),
+(117,34,1,'7,606 mAh (28.93 Wh), 20W fast charging'),
+(117,34,2,'7,606 mAh (28.93 Wh), sạc nhanh 20W'),
+(118,12,1,'10.9 inch Liquid Retina IPS LCD (2360 x 1640)'),
+(118,12,2,'10.9 inch Liquid Retina IPS LCD (2360 x 1640)'),
+(118,15,1,'60Hz'),
+(118,15,2,'60Hz'),
+(118,17,1,'Apple A14 Bionic (6-core)'),
+(118,17,2,'Apple A14 Bionic (6-core)'),
+(118,18,1,'Apple 4-core GPU'),
+(118,18,2,'Apple 4-core GPU'),
+(118,19,1,'4GB'),
+(118,19,2,'4GB'),
+(118,20,1,'64GB / 256GB'),
+(118,20,2,'64GB / 256GB'),
+(118,22,1,'12MP Wide, 4K 60fps video'),
+(118,22,2,'12MP Wide, quay video 4K 60fps'),
+(118,23,1,'12MP Landscape Ultra Wide, Center Stage'),
+(118,23,2,'12MP Landscape Ultra Wide, Center Stage'),
+(118,34,1,'7,606 mAh (28.6 Wh), 20W USB-C charging'),
+(118,34,2,'7,606 mAh (28.6 Wh), sạc USB-C 20W'),
+(119,12,1,'8.8 inch IPS LCD, 2.5K (2560 x 1600)'),
+(119,12,2,'8.8 inch IPS LCD, 2.5K (2560 x 1600)'),
+(119,15,1,'144Hz'),
+(119,15,2,'144Hz'),
+(119,17,1,'Qualcomm Snapdragon 8+ Gen 1 (4nm)'),
+(119,17,2,'Qualcomm Snapdragon 8+ Gen 1 (4nm)'),
+(119,18,1,'Adreno 730'),
+(119,18,2,'Adreno 730'),
+(119,19,1,'12GB LPDDR5X'),
+(119,19,2,'12GB LPDDR5X'),
+(119,20,1,'256GB / 512GB UFS 3.1'),
+(119,20,2,'256GB / 512GB UFS 3.1'),
+(119,22,1,'13MP (Main) + 2MP (Macro)'),
+(119,22,2,'13MP (Chính) + 2MP (Macro)'),
+(119,23,1,'8MP'),
+(119,23,2,'8MP'),
+(119,34,1,'6,550 mAh, 45W Super Flash Charge, dual Type-C'),
+(119,34,2,'6,550 mAh, sạc nhanh Super Flash Charge 45W, 2 cổng Type-C'),
+(120,12,1,'12.7 inch 3K LTPS LCD (2944 x 1840)'),
+(120,12,2,'12.7 inch 3K LTPS LCD (2944 x 1840)'),
+(120,15,1,'60Hz'),
+(120,15,2,'60Hz'),
+(120,17,1,'MediaTek Dimensity 7050 (6nm)'),
+(120,17,2,'MediaTek Dimensity 7050 (6nm)'),
+(120,18,1,'Mali-G68 MC4'),
+(120,18,2,'Mali-G68 MC4'),
+(120,19,1,'8GB LPDDR4X'),
+(120,19,2,'8GB LPDDR4X'),
+(120,20,1,'128GB / 256GB UFS 2.2'),
+(120,20,2,'128GB / 256GB UFS 2.2'),
+(120,22,1,'8MP AF with LED Flash'),
+(120,22,2,'8MP tự động lấy nét với Flash LED'),
+(120,23,1,'13MP Ultrawide with RGB sensor'),
+(120,23,2,'13MP Góc siêu rộng với cảm biến RGB'),
+(120,34,1,'10,200 mAh, 30W fast charging'),
+(120,34,2,'10,200 mAh, sạc nhanh 30W'),
+(121,12,1,'11.0 inch IPS LCD, WUXGA (1920 x 1200)'),
+(121,12,2,'11.0 inch IPS LCD, WUXGA (1920 x 1200)'),
+(121,15,1,'90Hz'),
+(121,15,2,'90Hz'),
+(121,17,1,'MediaTek Helio G88 (12nm)'),
+(121,17,2,'MediaTek Helio G88 (12nm)'),
+(121,18,1,'Mali-G52 MC2'),
+(121,18,2,'Mali-G52 MC2'),
+(121,19,1,'4GB LPDDR4X'),
+(121,19,2,'4GB LPDDR4X'),
+(121,20,1,'64GB / 128GB eMMC 5.1'),
+(121,20,2,'64GB / 128GB eMMC 5.1'),
+(121,22,1,'8MP AF'),
+(121,22,2,'8MP tự động lấy nét'),
+(121,23,1,'8MP'),
+(121,23,2,'8MP'),
+(121,34,1,'7,040 mAh, 15W charging'),
+(121,34,2,'7,040 mAh, sạc 15W'),
+(122,12,1,'12.4 inch 3K IPS LCD (3048 x 2032), 3:2 ratio'),
+(122,12,2,'12.4 inch 3K IPS LCD (3048 x 2032), tỷ lệ 3:2'),
+(122,15,1,'144Hz AdaptiveSync'),
+(122,15,2,'144Hz AdaptiveSync'),
+(122,17,1,'Qualcomm Snapdragon 8 Gen 2 (4nm)'),
+(122,17,2,'Qualcomm Snapdragon 8 Gen 2 (4nm)'),
+(122,18,1,'Adreno 740'),
+(122,18,2,'Adreno 740'),
+(122,19,1,'8GB LPDDR5X'),
+(122,19,2,'8GB LPDDR5X'),
+(122,20,1,'256GB / 512GB UFS 4.0'),
+(122,20,2,'256GB / 512GB UFS 4.0'),
+(122,22,1,'50MP (Main) + 2MP (Depth)'),
+(122,22,2,'50MP (Chính) + 2MP (Đo độ sâu)'),
+(122,23,1,'32MP with FocusFrame'),
+(122,23,2,'32MP với tính năng FocusFrame'),
+(122,34,1,'10,000 mAh, 120W HyperCharge'),
+(122,34,2,'10,000 mAh, sạc siêu nhanh 120W HyperCharge'),
+(123,12,1,'11.0 inch WQHD+ IPS LCD (2880 x 1800)'),
+(123,12,2,'11.0 inch WQHD+ IPS LCD (2880 x 1800)'),
+(123,15,1,'144Hz 7-stage Variable'),
+(123,15,2,'144Hz 7 cấp độ'),
+(123,17,1,'Qualcomm Snapdragon 870 5G (7nm)'),
+(123,17,2,'Qualcomm Snapdragon 870 5G (7nm)'),
+(123,18,1,'Adreno 650'),
+(123,18,2,'Adreno 650'),
+(123,19,1,'6GB / 8GB LPDDR5'),
+(123,19,2,'6GB / 8GB LPDDR5'),
+(123,20,1,'128GB / 256GB UFS 3.1'),
+(123,20,2,'128GB / 256GB UFS 3.1'),
+(123,22,1,'13MP, 4K 30fps video'),
+(123,22,2,'13MP, quay phim 4K 30fps'),
+(123,23,1,'8MP wide'),
+(123,23,2,'8MP góc rộng'),
+(123,34,1,'8,840 mAh, 33W fast charging'),
+(123,34,2,'8,840 mAh, sạc nhanh 33W'),
+(124,12,1,'12.1 inch 2.5K IPS LCD (2560 x 1600)'),
+(124,12,2,'12.1 inch 2.5K IPS LCD (2560 x 1600)'),
+(124,15,1,'120Hz AdaptiveSync'),
+(124,15,2,'120Hz AdaptiveSync'),
+(124,17,1,'Qualcomm Snapdragon 7s Gen 2 (4nm)'),
+(124,17,2,'Qualcomm Snapdragon 7s Gen 2 (4nm)'),
+(124,18,1,'Adreno 710'),
+(124,18,2,'Adreno 710'),
+(124,19,1,'6GB / 8GB LPDDR4X'),
+(124,19,2,'6GB / 8GB LPDDR4X'),
+(124,20,1,'128GB / 256GB UFS 2.2'),
+(124,20,2,'128GB / 256GB UFS 2.2'),
+(124,22,1,'8MP AF'),
+(124,22,2,'8MP tự động lấy nét'),
+(124,23,1,'8MP wide'),
+(124,23,2,'8MP góc rộng'),
+(124,34,1,'10,000 mAh, 33W fast charging'),
+(124,34,2,'10,000 mAh, sạc nhanh 33W');
 /*!40000 ALTER TABLE `oc_product_attribute` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6173,8 +6417,6 @@ INSERT INTO `oc_product_description` VALUES
 (47,2,'HP LP3065','&lt;p&gt;Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you\'re at the office&lt;/p&gt;','','HP LP3065','',''),
 (48,1,'iPod Classic','&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;\r\n&lt;p&gt;&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;','','iPod Classic','',''),
 (48,2,'iPod Classic','&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;\r\n&lt;p&gt;&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;','','iPod Classic','',''),
-(49,1,'Samsung Galaxy Tab 10.1','&lt;p&gt;Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 – includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick – a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader’s Hub, Music Hub and Samsung Mini Apps Tray – which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;äö&lt;/p&gt;','','Samsung Galaxy Tab 10.1','',''),
-(49,2,'Samsung Galaxy Tab S9 Ultra 5G (12GB/256GB)','&lt;p&gt;Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 – includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick – a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader’s Hub, Music Hub and Samsung Mini Apps Tray – which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;äö&lt;/p&gt;','','Samsung Galaxy Tab 10.1','',''),
 (50,1,'Laptop ASUS VivoBook 14 X1407CA-LY008W','&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;\r\n&lt;style type=&quot;text/css&quot;&gt;p{\r\n    text-indent:30px;\r\n    font-size: 20px;\r\n    margin:0px;\r\n}\r\n&lt;/style&gt;\r\n&lt;p&gt;The ASUS VivoBook 14 X1407CA-LY008W features the Intel Core Ultra 5 Processor 225H, integrated with a powerful Intel AI Boost NPU. Equipped with 16GB of DDR5 RAM and a 512GB SSD, it ensures stable multitasking performance. It also offers a 14-inch WUXGA 16:10 display and US military-grade durability for long-lasting reliability.&lt;/p&gt;','','Laptop ASUS VivoBook 14 X1407CA-LY008W','',''),
 (50,2,'Laptop ASUS VivoBook 14 X1407CA-LY008W','&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;\r\n&lt;style type=&quot;text/css&quot;&gt;p{\r\n    text-indent:30px;\r\n    font-size: 20px;\r\n    margin:0px;\r\n}\r\n&lt;/style&gt;\r\n&lt;p&gt;Laptop ASUS VivoBook 14 X1407CA-LY008W là mẫu máy tính sở hữu bộ vi xử lý Intel Core Ultra 5 Processor 225H tích hợp nhân NPU Intel AI Boost mạnh mẽ. RAM 16GB DDR5 cùng SSD 512GB giúp máy vận hành đa nhiệm ổn định. Màn hình 14 inch WUXGA 16:10 cùng độ bền đạt chuẩn quân đội Mỹ cho trải nghiệm bền bỉ.&lt;/p&gt;','','Laptop ASUS VivoBook 14 X1407CA-LY008W','',''),
 (51,1,'Laptop ASUS Vivobook 14 X1404VA-EB355W','&lt;h1 class=&quot;x1ghz6dp x1717udv x1wty727 x4gjf66 xdj266r x15eiy0f x1lziwak x15472z4 xngnso2 xhacrq1 x1lliihq x1s688f x14rh7hd&quot; data-d-component=&quot;title&quot; style=&quot;--x-color: var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Laptop&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;–&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Powerful&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Performance&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;in&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Modern,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Slim,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Lightweight&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Design&lt;/span&gt;&lt;/h1&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1kw3rcc x104jwf5 x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;combines&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;powerful&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;specifications&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;with&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;compact,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;lightweight&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;chassis,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;delivering&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;smooth&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;performance&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;everyday&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;office&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;work&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;study&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;tasks.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;By&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;balancing&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;performance,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;design,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;portability,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;laptop&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;provides&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;convenient&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;reliable&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;user&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;experience&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;long-term&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;use.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;h2 class=&quot;x1ghz6dp x1717udv x1wty727 x4gjf66 xce2ely xvmwfg3 x1lziwak x15472z4 x1603h9y xladpa3 x1lliihq x1s688f x14rh7hd&quot; data-d-component=&quot;title&quot; style=&quot;--x-color: var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;High-Speed&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;DDR5&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;RAM&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Large-Capacity&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;PCIe&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;4.0&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;SSD&lt;/span&gt;&lt;/h2&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1kw3rcc x104jwf5 x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;laptop&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;is&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;equipped&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;with&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;16GB&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;DDR5&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;RAM,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;offering&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;faster&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;data&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;transfer&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;speeds&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;than&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;previous&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;DDR4&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;generation.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;This&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;allows&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;laptop&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;handle&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;multitasking&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;efficiently,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;such&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;as&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;running&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;multiple&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;browser&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;tabs&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;or&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;educational&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;applications,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;while&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;maintaining&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;smooth&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;performance.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span class=&quot;xt0psk2 x1ghz6dp x1717udv x1wty727 x4gjf66 x15eiy0f x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1s688f x14rh7hd xdj266r&quot; data-d-component=&quot;text&quot; data-d-inline=&quot;&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, inherit));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;RAM&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;–&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Smooth&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Multitasking&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Seamless&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Everyday&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Productivity&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;memory&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;configuration&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;consists&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;8GB&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;onboard&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;DDR5&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;RAM&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;8GB&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;DDR5&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;SO-DIMM&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;RAM,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ensuring&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;stable&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;system&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;performance&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;right&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;from&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;start.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;In&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;addition,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;this&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;configuration&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;allows&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;users&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;upgrade&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;RAM&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;in&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;future&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;as&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;their&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;workload&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;performance&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;requirements&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;increase.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;features&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;512GB&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;M.2&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;NVMe&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;PCIe&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;4.0&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;SSD,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;providing&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;fast&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;read&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;write&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;speeds&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;along&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;with&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ample&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;storage&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;capacity.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Operating&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;system&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;startup,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;application&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;launches,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;file&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;transfers&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;are&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;completed&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;quickly,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;helping&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;users&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;save&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;valuable&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;time&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;maximize&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;productivity.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;h2 class=&quot;x1ghz6dp x1717udv x1wty727 x4gjf66 xce2ely xvmwfg3 x1lziwak x15472z4 x1603h9y xladpa3 x1lliihq x1s688f x14rh7hd&quot; data-d-component=&quot;title&quot; style=&quot;--x-color: var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Elegant&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Silver&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Finish&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Lightweight&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Design&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Easy&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Portability&lt;/span&gt;&lt;/h2&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1kw3rcc x104jwf5 x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;features&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;minimalist&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;design&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;focused&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;on&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;practicality&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ease&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;use.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Its&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;neutral&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;silver&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;finish&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;gives&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;laptop&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;an&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;elegant&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;appearance,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;making&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;it&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;suitable&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;various&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;environments,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;including&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;offices&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;schools.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;timeless&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;design&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;also&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;helps&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;laptop&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;maintain&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;its&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;sophisticated&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;look&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;over&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;time.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span class=&quot;xt0psk2 x1ghz6dp x1717udv x1wty727 x4gjf66 x15eiy0f x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1s688f x14rh7hd xdj266r&quot; data-d-component=&quot;text&quot; data-d-inline=&quot;&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, inherit));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Design&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;–&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Easy&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Carry,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Ideal&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Studying&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Working&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Anywhere&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Weighing&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;just&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;1.4kg&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;measuring&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;approximately&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;17.9mm&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;in&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;thickness,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;offers&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;excellent&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;portability.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Its&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;compact&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;dimensions&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;32.49&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;×&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;21.39&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;cm&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;make&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;it&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;easy&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;fit&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;on&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;desk&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;without&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;taking&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;up&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;too&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;much&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;space.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;This&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;is&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;significant&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;advantage&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;users&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;who&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;frequently&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;travel&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;or&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;commute.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;h2 class=&quot;x1ghz6dp x1717udv x1wty727 x4gjf66 xce2ely xvmwfg3 x1lziwak x15472z4 x1603h9y xladpa3 x1lliihq x1s688f x14rh7hd&quot; data-d-component=&quot;title&quot; style=&quot;--x-color: var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Powered&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;by&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Intel&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Core&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;7&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Processor&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;150U&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Intel&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Graphics&lt;/span&gt;&lt;/h2&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1kw3rcc x104jwf5 x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;is&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;powered&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;by&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Intel&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Core&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;7&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;150U&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;processor,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;which&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;combines&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;energy&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;efficiency&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;with&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;reliable&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;performance&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;everyday&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;office&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;tasks.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Featuring&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;10&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;cores&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;12&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;threads,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;base&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;clock&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;speed&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;1.8GHz,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;maximum&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;boost&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;frequency&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;up&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;5.4GHz,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;processor&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;handles&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;data&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;entry,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;calculations,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;data&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;processing&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;quickly&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;efficiently.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span class=&quot;xt0psk2 x1ghz6dp x1717udv x1wty727 x4gjf66 x15eiy0f x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1s688f x14rh7hd xdj266r&quot; data-d-component=&quot;text&quot; data-d-inline=&quot;&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, inherit));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Processor&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;–&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Smooth&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Performance&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Everyday&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Office&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Work,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Studying,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Multitasking&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Thanks&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;its&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;multi-core&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;architecture,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;runs&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;multiple&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;applications&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;simultaneously&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;while&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;maintaining&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;stable&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;performance&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;reducing&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;risk&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;system&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;overload.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Its&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;performance&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;level&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;is&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;well&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;suited&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;office&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;workers,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;teachers,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;students,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;users&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;who&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;regularly&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;work&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;with&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;data.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span class=&quot;xt0psk2 x1ghz6dp x1717udv x1wty727 x4gjf66 x15eiy0f x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1s688f x14rh7hd xdj266r&quot; data-d-component=&quot;text&quot; data-d-inline=&quot;&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, inherit));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Basic&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Editing&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;–&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Full&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;HD&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Video&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Playback,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Basic&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Image&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Editing,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Everyday&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Productivity&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;integrated&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Intel&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Graphics&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;GPU&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;is&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;suitable&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Full&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;HD&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;content&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;playback&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;basic&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;image&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;processing.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Although&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;it&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;is&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;not&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;designed&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;demanding&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;graphics-intensive&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;workloads,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;integrated&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;GPU&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;provides&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;sufficient&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;performance&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;casual&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;entertainment&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;everyday&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;office&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;applications.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;h2 class=&quot;x1ghz6dp x1717udv x1wty727 x4gjf66 xce2ely xvmwfg3 x1lziwak x15472z4 x1603h9y xladpa3 x1lliihq x1s688f x14rh7hd&quot; data-d-component=&quot;title&quot; style=&quot;--x-color: var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Flexible&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;180-Degree&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Hinge&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Convenient&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Connectivity&lt;/span&gt;&lt;/h2&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1kw3rcc x104jwf5 x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;features&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;180-degree&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;hinge,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;allowing&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;users&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;adjust&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;screen&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;position&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;greater&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;flexibility&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;while&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;working.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;laptop&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;is&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;also&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;equipped&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;with&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;42Wh&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;battery,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;supporting&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;extended&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;use&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;throughout&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;several&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;hours&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;work.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Its&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;energy-efficient&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;U-series&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;processor&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;helps&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;optimize&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;power&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;consumption,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;allowing&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;laptop&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;perform&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;reliably&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;throughout&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;workday.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span class=&quot;xt0psk2 x1ghz6dp x1717udv x1wty727 x4gjf66 x15eiy0f x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1s688f x14rh7hd xdj266r&quot; data-d-component=&quot;text&quot; data-d-inline=&quot;&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, inherit));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Flexibility&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;–&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Work&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Comfortably&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Connect&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Your&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Devices&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;with&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Ease&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1wwbdsi x86bw1a x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;laptop&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;offers&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;versatile&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;selection&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;connectivity&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ports,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;including&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;USB-A,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;USB-C,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;HDMI&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;1.4,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;3.5mm&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;audio&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;jack.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;These&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;connections&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;make&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;it&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;easier&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;connect&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;peripherals,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;external&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;displays,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;other&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;devices&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;presentations&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;everyday&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;productivity.&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;h2 class=&quot;x1ghz6dp x1717udv x1wty727 x4gjf66 xce2ely xvmwfg3 x1lziwak x15472z4 x1603h9y xladpa3 x1lliihq x1s688f x14rh7hd&quot; data-d-component=&quot;title&quot; style=&quot;--x-color: var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14-Inch&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Full&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;HD&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Anti-Glare&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Display&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Clear&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Viewing&lt;/span&gt;&lt;/h2&gt;\r\n\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x1kw3rcc x104jwf5 x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;The&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ASUS&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Vivobook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;X1404VA-EB355W&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;features&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;14-inch&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Full&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;HD&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;display&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;that&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;delivers&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;sharp&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;images&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;provides&lt;/span&gt;&lt;/p&gt;','','Laptop ASUS Vivobook 14 X1404VA-EB355W','',''),
@@ -6253,24 +6495,24 @@ INSERT INTO `oc_product_description` VALUES
 (95,2,'Tai nghe True Wireless Haylou GT1 Pro','Tai nghe không dây True Wireless Haylou GT1 Pro','','Haylou GT1 Pro','',''),
 (96,1,'JBL Tune 720BT Wireless Headphones','JBL Tune 720BT Wireless','','JBL Tune 720BT','',''),
 (96,2,'Tai nghe chống ồn JBL Tune 720BT','Tai nghe chụp tai JBL Tune 720BT bass sâu','','JBL Tune 720BT','',''),
-(97,1,'Logitech G102 Gen 2 Lightsync Gaming Mouse','Logitech G102 Gen 2 Gaming Mouse','','Logitech G102 Gen 2','',''),
-(97,2,'Chuột Gaming Logitech G102 Gen 2 Lightsync','Chuột gaming có dây Logitech G102 Gen 2 LED RGB','','Logitech G102 Gen 2','',''),
-(98,1,'Razer DeathAdder V2 Gaming Mouse','Razer DeathAdder V2 Gaming Mouse','','Razer DeathAdder V2','',''),
-(98,2,'Chuột Gaming Razer DeathAdder V2','Chuột chơi game Razer DeathAdder V2 chính hãng','','Razer DeathAdder V2','',''),
-(99,1,'Logitech G402 Hyperion Fury Gaming Mouse','Logitech G402 Gaming Mouse','','Logitech G402','',''),
-(99,2,'Chuột Gaming Logitech G402 Hyperion Fury','Chuột gaming tốc độ cao Logitech G402','','Logitech G402','',''),
-(100,1,'Zowie EC2-C eSports Gaming Mouse','Zowie EC2-C Gaming Mouse','','Zowie EC2-C','',''),
-(100,2,'Chuột Gaming Zowie EC2-C','Chuột eSports chuyên nghiệp Zowie EC2-C','','Zowie EC2-C','',''),
+(97,1,'Logitech G102 Gen 2 Lightsync Gaming Mouse','&lt;p&gt;Logitech G102 Gen 2 Gaming Mouse&lt;/p&gt;','','Logitech G102 Gen 2','',''),
+(97,2,'Chuột Gaming Logitech G102 Gen 2 Lightsync','&lt;p&gt;Chuột gaming có dây Logitech G102 Gen 2 LED RGB&lt;/p&gt;','','Logitech G102 Gen 2','',''),
+(98,1,'Razer DeathAdder V2 Gaming Mouse','&lt;p&gt;Razer DeathAdder V2 Gaming Mouse&lt;/p&gt;','','Razer DeathAdder V2','',''),
+(98,2,'Chuột Gaming Razer DeathAdder V2','&lt;p&gt;Chuột chơi game Razer DeathAdder V2 chính hãng&lt;/p&gt;','','Razer DeathAdder V2','',''),
+(99,1,'Logitech G402 Hyperion Fury Gaming Mouse','&lt;p&gt;Logitech G402 Gaming Mouse&lt;/p&gt;','','Logitech G402','',''),
+(99,2,'Chuột Gaming Logitech G402 Hyperion Fury','&lt;p&gt;Chuột gaming tốc độ cao Logitech G402&lt;/p&gt;','','Logitech G402','',''),
+(100,1,'Zowie EC2-C eSports Gaming Mouse','&lt;p&gt;Zowie EC2-C Gaming Mouse&lt;/p&gt;','','Zowie EC2-C','',''),
+(100,2,'Chuột Gaming Zowie EC2-C','&lt;p&gt;Chuột eSports chuyên nghiệp Zowie EC2-C&lt;/p&gt;','','Zowie EC2-C','',''),
 (101,1,'Corsair M65 RGB Elite Gaming Mouse','&lt;p&gt;Corsair M65 Gaming Mouse&lt;/p&gt;','','Corsair M65 RGB Elite','',''),
 (101,2,'Chuột Gaming Corsair M65 RGB Elite','&lt;p&gt;Chuột gaming cao cấp Corsair M65 RGB Elite&lt;/p&gt;','','Corsair M65 RGB Elite','',''),
-(102,1,'Logitech MX Master 3S Wireless Bluetooth Mouse','Logitech MX Master 3S','','Logitech MX Master 3S','',''),
-(102,2,'Chuột không dây Bluetooth Logitech MX Master 3S','Chuột văn phòng cao cấp Logitech MX Master 3S','','Logitech MX Master 3S','',''),
+(102,1,'Logitech MX Master 3S Wireless Bluetooth Mouse','&lt;p&gt;Logitech MX Master 3S&lt;/p&gt;','','Logitech MX Master 3S','',''),
+(102,2,'Chuột không dây Bluetooth Logitech MX Master 3S','&lt;p&gt;Chuột văn phòng cao cấp Logitech MX Master 3S&lt;/p&gt;','','Logitech MX Master 3S','',''),
 (103,1,'Logitech Pebble M350 Bluetooth Mouse','&lt;p&gt;Logitech Pebble M350&lt;/p&gt;','','Logitech Pebble M350','',''),
 (103,2,'Chuột Bluetooth Logitech Pebble M350','&lt;p&gt;Chuột không dây mỏng nhẹ Logitech Pebble M350&lt;/p&gt;','','Logitech Pebble M350','',''),
-(104,1,'Microsoft Bluetooth Mouse','Microsoft Bluetooth Mouse','','Microsoft Bluetooth Mouse','',''),
-(104,2,'Chuột Microsoft Bluetooth Mouse','Chuột không dây Microsoft thiết kế tối giản','','Microsoft Bluetooth Mouse','',''),
-(105,1,'Razer Pro Click Mini Mobile Mouse','Razer Pro Click Mini','','Razer Pro Click Mini','',''),
-(105,2,'Chuột không dây Razer Pro Click Mini','Chuột di động cao cấp Razer Pro Click Mini','','Razer Pro Click Mini','',''),
+(104,1,'Microsoft Bluetooth Mouse','&lt;p&gt;Microsoft Bluetooth Mouse&lt;/p&gt;','','Microsoft Bluetooth Mouse','',''),
+(104,2,'Chuột Microsoft Bluetooth Mouse','&lt;p&gt;Chuột không dây Microsoft thiết kế tối giản&lt;/p&gt;','','Microsoft Bluetooth Mouse','',''),
+(105,1,'Razer Pro Click Mini Mobile Mouse','&lt;p&gt;Razer Pro Click Mini&lt;/p&gt;','','Razer Pro Click Mini','',''),
+(105,2,'Chuột không dây Razer Pro Click Mini','&lt;p&gt;Chuột di động cao cấp Razer Pro Click Mini&lt;/p&gt;','','Razer Pro Click Mini','',''),
 (106,1,'Asus ROG Strix Carry Wireless Gaming Mouse','&lt;p&gt;Asus ROG Strix Carry&lt;/p&gt;','','Asus ROG Strix Carry','',''),
 (106,2,'Chuột Gaming Bluetooth Asus ROG Strix Carry','&lt;p&gt;Chuột gaming không dây nhỏ gọn Asus ROG Strix Carry&lt;/p&gt;','','Asus ROG Strix Carry','',''),
 (107,1,'MacBook Neo 13 8GB/256GB/20W','&lt;div class=&quot;xjbqb8w xbs2zpe x1jchvi3 x1r771fr xh8yej3 x14nib4c x1ep1s60 x193iq5w xeuugli x1n2onr6&quot;&gt;\r\n&lt;div&gt;\r\n&lt;div class=&quot;xh8yej3 x1ghz6dp x193iq5w xeuugli x1mzt3pk x5x58ly xhkq44x xvyh8ph xwxxt6x x1ewz1rw x1r0vnzf x1ux7cnd xp43mbd xtbxs66 xak2u8z x1yc453h x16sz92x&quot; data-assistant-markdown=&quot;&quot; data-assistant-markdown-root=&quot;&quot;&gt;\r\n&lt;div aria-busy=&quot;false&quot;&gt;\r\n&lt;div&gt;\r\n&lt;div&gt;\r\n&lt;section aria-label=&quot;DIL content&quot; class=&quot;xvmahel xlh3980 x78zum5 xdt5ytf x1qjc9v5 x1gpaknb x1jchvi3 xo1l8bm x12oo3zp x14nib4c x1fj9vlw x1mzt3pk x9f619 xeuugli x19aimcq x14rh7hd&quot; dir=&quot;auto&quot; style=&quot;--x-color: var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)));&quot;&gt;\r\n&lt;p class=&quot;x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 xdj266r x15eiy0f x1lziwak x15472z4 x1qlqyl8 x15bjb6t x1lliihq x14rh7hd&quot; data-d-component=&quot;text&quot; style=&quot;--x-color: var(--d-link-hover-color, var(--d-inherited-text-color, var(--color-text-prose, light-dark(rgba(13, 13, 13, 1), rgba(255, 255, 255, 1)))));&quot;&gt;&lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Designed&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;to&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;meet&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;basic&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;study&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;work&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;needs,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;MacBook&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Neo&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;delivers&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;familiar&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Apple&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;ecosystem&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;experience&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;in&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;compact&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;lightweight&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;design.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;It&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;is&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;powered&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;by&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Apple&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;A18&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Pro&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;chip,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;featuring&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;6-core&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;CPU,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;5-core&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;GPU,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;16-core&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Neural&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Engine.&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Combined&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;with&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;13-inch&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Liquid&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;Retina&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;display&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;with&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;500&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;nits&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;brightness,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;8GB&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;of&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;RAM,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;a&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;256GB&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;SSD,&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;the&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;device&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;is&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;well&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;suited&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;for&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;everyday&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;learning&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;and&lt;/span&gt; &lt;span data-d-streaming-word=&quot;&quot; style=&quot;&quot;&gt;entertainment.&lt;/span&gt;&lt;/p&gt;\r\n&lt;/section&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div role=&quot;status&quot;&gt;&amp;nbsp;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;xrvj5dj x161yhwk x1k8jhqm&quot; data-message-intervention=&quot;&quot;&gt;&amp;nbsp;&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div aria-label=&quot;Response actions&quot; class=&quot;xzq6wi8 x6s0dn4 xsizsl4 x78zum5 xbjcvb9 x1lvaidh x5gxw34 x1lu42hc x1r0vwrn&quot; data-assistant-message-actions=&quot;&quot; data-message-actions=&quot;&quot; role=&quot;group&quot;&gt;&lt;button aria-label=&quot;Copy response&quot; class=&quot;x1y0btm7 x9f619 xln7xf2 x17j2mab xc0rdgb xl56j7k x1q51uy1 x1n2onr6 x2b8uid x1b2iylo xwgcxoh x1hl2dhg xhe84ma xcuo91f x9jqm76 xhkbipy xl65fg8 x1jlfb0b x1fo1fc9 x1s3pajs x11wgzky xulogpc x1cpjm7i x8ccfc1 x255zhq x1txhlq7 xtg4hg7 x1o0wn7w xkk1bqk x1hmns74 xy5mcqj xjbqb8w x15xj62w x9r1u3d x116uinm xu82sp8 x1gnnqk1 x13yhu5o x1ypdohk xtgyt42 xrvj5dj x1kee97p xtcsvct xy5k6zg xc8icb0 x11doy3g x1gg8mnh x1nb6za0 xk2swo9 x1717udv x1ku5rj1 x1vlh6m7 x1dafclu xcr73hy&quot; data-copy-message=&quot;&quot; data-copy-state=&quot;idle&quot; data-icon-only=&quot;&quot; data-icon-position=&quot;start&quot; data-icon-shape=&quot;non-circular&quot; data-oai-tooltip=&quot;&quot; data-oai-tooltip-side=&quot;bottom&quot; data-oai-tooltip-side-offset=&quot;8&quot; data-radius=&quot;full&quot; data-size=&quot;small&quot; data-target-offset=&quot;both&quot; data-variant=&quot;ghost&quot; data-w-component=&quot;button&quot; type=&quot;button&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; class=&quot;xgltsgi x1e0upst&quot; fill=&quot;none&quot; height=&quot;20&quot; viewbox=&quot;0 0 20 20&quot; width=&quot;20&quot;&gt;&lt;use href=&quot;https://chatgpt.com/uc/6ad237c0-20c4-83ea-9a37-9bd1197dcc4b#lightweight-conversation-copy&quot;&gt;&lt;symbol id=&quot;lightweight-conversation-copy&quot; viewbox=&quot;0 0 20 20&quot;&gt;&lt;g transform=&quot;translate(0 0.049805)&quot;&gt;&lt;/g&gt;&lt;/symbol&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;','','MacBook Neo 13','',''),
@@ -6281,10 +6523,32 @@ INSERT INTO `oc_product_description` VALUES
 (109,2,'MacBook Pro 14 M5 2025 10CPU/10GPU/24GB/1TB','&lt;p&gt;Với thế hệ MacBook Pro 14 inch M5 2025, Apple đã mở ra trải nghiệm chuyên nghiệp hoàn toàn mới với chip M5 mạnh mẽ, màn hình Liquid Retina XDR rực rỡ cùng thời lượng pin tới 24 giờ. Sản phẩm hướng đến đối tượng người dùng sáng tạo, các nhà phát triển và doanh nghiệp, mang đến khả năng xử lý AI nhanh gấp 6 lần so với thế hệ M1.&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;','','MacBook Pro 14 M5 2025','',''),
 (110,1,'MacBook Pro 16 M5 Pro 2026 18CPU/20GPU/48GB/1TB/140W','&lt;p&gt;Powered by the Apple M5 Pro chip, 48GB of RAM, and a 1TB SSD, the MacBook Pro 16 M5 Pro 2026 (18-core CPU/20-core GPU/48GB/1TB) delivers impressive performance for demanding professional workflows and next-generation AI tasks. It features a 16.2-inch Liquid Retina XDR display, up to 24 hours of battery life, and a weight of approximately 2.14 kg, making it a suitable choice for content creators and professional users.&lt;/p&gt;\r\n\r\n&lt;div class=&quot;xjbqb8w xbs2zpe x1jchvi3 x1r771fr xh8yej3 x14nib4c x1ep1s60 x193iq5w xeuugli x1n2onr6&quot;&gt;\r\n&lt;div&gt;\r\n&lt;div class=&quot;xh8yej3 x1ghz6dp x193iq5w xeuugli x1mzt3pk x5x58ly xhkq44x xvyh8ph xwxxt6x x1ewz1rw x1r0vnzf x1ux7cnd xp43mbd xtbxs66 xak2u8z x1yc453h x16sz92x&quot; data-assistant-markdown=&quot;&quot; data-assistant-markdown-root=&quot;&quot;&gt;\r\n&lt;div aria-busy=&quot;false&quot;&gt;\r\n&lt;div role=&quot;status&quot;&gt;&amp;nbsp;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;xrvj5dj x161yhwk x1k8jhqm&quot; data-message-intervention=&quot;&quot;&gt;&amp;nbsp;&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div aria-label=&quot;Response actions&quot; class=&quot;xzq6wi8 x6s0dn4 xsizsl4 x78zum5 xbjcvb9 x1lvaidh x5gxw34 x1lu42hc x1r0vwrn&quot; data-assistant-message-actions=&quot;&quot; data-message-actions=&quot;&quot; role=&quot;group&quot;&gt;&lt;button aria-label=&quot;Copy response&quot; class=&quot;x1y0btm7 x9f619 xln7xf2 x17j2mab xc0rdgb xl56j7k x1q51uy1 x1n2onr6 x2b8uid x1b2iylo xwgcxoh x1hl2dhg xhe84ma xcuo91f x9jqm76 xhkbipy xl65fg8 x1jlfb0b x1fo1fc9 x1s3pajs x11wgzky xulogpc x1cpjm7i x8ccfc1 x255zhq x1txhlq7 xtg4hg7 x1o0wn7w xkk1bqk x1hmns74 xy5mcqj xjbqb8w x15xj62w x9r1u3d x116uinm xu82sp8 x1gnnqk1 x13yhu5o x1ypdohk xtgyt42 xrvj5dj x1kee97p xtcsvct xy5k6zg xc8icb0 x11doy3g x1gg8mnh x1nb6za0 xk2swo9 x1717udv x1ku5rj1 x1vlh6m7 x1dafclu xcr73hy&quot; data-copy-message=&quot;&quot; data-copy-state=&quot;idle&quot; data-icon-only=&quot;&quot; data-icon-position=&quot;start&quot; data-icon-shape=&quot;non-circular&quot; data-oai-tooltip=&quot;&quot; data-oai-tooltip-side=&quot;bottom&quot; data-oai-tooltip-side-offset=&quot;8&quot; data-radius=&quot;full&quot; data-size=&quot;small&quot; data-target-offset=&quot;both&quot; data-variant=&quot;ghost&quot; data-w-component=&quot;button&quot; type=&quot;button&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; class=&quot;xgltsgi x1e0upst&quot; fill=&quot;none&quot; height=&quot;20&quot; viewbox=&quot;0 0 20 20&quot; width=&quot;20&quot;&gt;&lt;use href=&quot;https://chatgpt.com/uc/6ad237c0-20c4-83ea-9a37-9bd1197dcc4b#lightweight-conversation-copy&quot;&gt;&lt;symbol id=&quot;lightweight-conversation-copy&quot; viewbox=&quot;0 0 20 20&quot;&gt;&lt;g transform=&quot;translate(0 0.049805)&quot;&gt;&lt;/g&gt;&lt;/symbol&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;','','MacBook Pro 16 M5 Pro 2026','',''),
 (110,2,'MacBook Pro 16 M5 Pro 2026 18CPU/20GPU/48GB/1TB/140W','&lt;p&gt;Sở hữu chip Apple M5 Pro, 48 GB RAM và SSD 1 TB, chiếc MacBook Pro 16 M5 Pro 2026 18CPU/20GPU/48GB/1TB bạn đang theo dõi cung cấp sức mạnh ấn tượng để người dùng làm việc chuyên sâu và thực hiện các tác vụ AI thế hệ mới. Máy sở hữu màn hình Liquid Retina XDR 16.2 inch, thời lượng pin lên đến 24 giờ và trọng lượng khoảng 2,14 kg, phù hợp với các nhà sáng tạo nội dung và người dùng chuyên nghiệp&lt;/p&gt;','','MacBook Pro 16 M5 Pro 2026','',''),
-(111,1,'iPad Pro 11 inch M4 Wifi 256GB','<p>iPad Pro powered by Apple M4 chip with Ultra Retina XDR display.</p>',NULL,'iPad Pro 11 inch M4',NULL,NULL),
-(111,2,'iPad Pro 11 inch M4 Wifi 256GB (Chính hãng Apple)','<p>iPad Pro thế hệ mới trang bị chip Apple M4 đột phá, màn hình Ultra Retina XDR siêu sắc nét và thiết kế mỏng nhẹ đỉnh cao.</p>',NULL,'iPad Pro 11 inch M4',NULL,NULL),
 (112,1,'Xiaomi Pad 6 (8GB/128GB)','<p>Xiaomi Pad 6 with 144Hz 2.8K display, Snapdragon 870 processor.</p>',NULL,'Xiaomi Pad 6 8GB 128GB',NULL,NULL),
-(112,2,'Máy tính bảng Xiaomi Pad 6 (8GB/128GB) Chính Hãng','<p>Xiaomi Pad 6 với màn hình 144Hz 2.8K, chip Snapdragon 870 mạnh mẽ, pin 8840mAh sạc nhanh 33W.</p>',NULL,'Xiaomi Pad 6 8GB 128GB',NULL,NULL);
+(112,2,'Máy tính bảng Xiaomi Pad 6 (8GB/128GB) Chính Hãng','<p>Xiaomi Pad 6 với màn hình 144Hz 2.8K, chip Snapdragon 870 mạnh mẽ, pin 8840mAh sạc nhanh 33W.</p>',NULL,'Xiaomi Pad 6 8GB 128GB',NULL,NULL),
+(113,1,'Samsung Galaxy Tab S10 Ultra Tablet','&lt;p&gt;&lt;strong&gt;Samsung Galaxy Tab S10 Ultra&lt;/strong&gt; is the ultimate flagship Android tablet featuring a massive 14.6-inch Dynamic AMOLED 2X display, MediaTek Dimensity 9300+ processor, and full Galaxy AI integration. Includes the versatile S-Pen and IP68 water resistance.&lt;/p&gt;','Samsung Galaxy Tab S10 Ultra Tablet','Samsung Galaxy Tab S10 Ultra Tablet','Samsung Galaxy Tab S10 Ultra Tablet official at Tech Station','samsung-galaxy-tab-s10-ultra'),
+(113,2,'Máy tính bảng Samsung Galaxy Tab S10 Ultra','&lt;p&gt;&lt;strong&gt;Samsung Galaxy Tab S10 Ultra&lt;/strong&gt; là chiếc máy tính bảng Android đỉnh cao nhất hiện nay, sở hữu màn hình Dynamic AMOLED 2X 14.6 inch cực đại, vi xử lý MediaTek Dimensity 9300+ mạnh mẽ và tích hợp toàn diện Galaxy AI thế hệ mới. Đi kèm bút S-Pen quyền năng cùng khả năng kháng nước chuẩn IP68.&lt;/p&gt;','Máy tính bảng Samsung Galaxy Tab S10 Ultra','Máy tính bảng Samsung Galaxy Tab S10 Ultra','Máy tính bảng Samsung Galaxy Tab S10 Ultra chính hãng giá tốt tại Tech Station','samsung-galaxy-tab-s10-ultra'),
+(114,1,'Samsung Galaxy Tab S9 FE+ Tablet','<p><strong>Samsung Galaxy Tab S9 FE+</strong> offers a spacious 12.4-inch display, IP68 water and dust resistance, and an included S-Pen perfect for productivity and creative tasks.</p>','Samsung Galaxy Tab S9 FE+ Tablet','Samsung Galaxy Tab S9 FE+ Tablet','Samsung Galaxy Tab S9 FE+ Tablet official at Tech Station','samsung-galaxy-tab-s9-fe-plus'),
+(114,2,'Máy tính bảng Samsung Galaxy Tab S9 FE+','<p><strong>Samsung Galaxy Tab S9 FE+</strong> mang lại trải nghiệm màn hình lớn 12.4 inch sắc nét, độ phân giải cao cùng khả năng kháng nước bụi IP68 bền bỉ và bút S-Pen đi kèm tiện lợi cho học tập, sáng tạo.</p>','Máy tính bảng Samsung Galaxy Tab S9 FE+','Máy tính bảng Samsung Galaxy Tab S9 FE+','Máy tính bảng Samsung Galaxy Tab S9 FE+ chính hãng giá tốt tại Tech Station','samsung-galaxy-tab-s9-fe-plus'),
+(115,1,'Samsung Galaxy Tab A9+ Tablet','<p><strong>Samsung Galaxy Tab A9+</strong> is a versatile family entertainment tablet with an 11-inch 90Hz smooth display, quad Dolby Atmos speakers, and Snapdragon 695 performance.</p>','Samsung Galaxy Tab A9+ Tablet','Samsung Galaxy Tab A9+ Tablet','Samsung Galaxy Tab A9+ Tablet official at Tech Station','samsung-galaxy-tab-a9-plus'),
+(115,2,'Máy tính bảng Samsung Galaxy Tab A9+','<p><strong>Samsung Galaxy Tab A9+</strong> là chiếc máy tính bảng giải trí gia đình lý tưởng với màn hình 11 inch 90Hz mượt mà, hệ thống 4 loa Dolby Atmos sống động và chip Snapdragon 695 ổn định.</p>','Máy tính bảng Samsung Galaxy Tab A9+','Máy tính bảng Samsung Galaxy Tab A9+','Máy tính bảng Samsung Galaxy Tab A9+ chính hãng giá tốt tại Tech Station','samsung-galaxy-tab-a9-plus'),
+(116,1,'Apple iPad Pro M4 11-inch','&lt;p&gt;&lt;strong&gt;iPad Pro M4 11-inch&lt;/strong&gt; breaks boundaries with an impossibly thin 5.3mm design, breakthrough Ultra Retina XDR Tandem OLED display, and outrageous performance powered by the Apple M4 chip.&lt;/p&gt;','Apple iPad Pro M4 11-inch','Apple iPad Pro M4 11-inch','Apple iPad Pro M4 11-inch official at Tech Station','ipad-pro-m4-11'),
+(116,2,'Máy tính bảng iPad Pro M4 11 inch','&lt;p&gt;&lt;strong&gt;iPad Pro M4 11 inch&lt;/strong&gt; đột phá với thiết kế siêu mỏng nhẹ chỉ 5.3mm, trang bị màn hình Ultra Retina XDR Tandem OLED tiên tiến bậc nhất cùng sức mạnh vượt trội của chip Apple M4 cho công việc đồ họa chuyên nghiệp.&lt;/p&gt;','Máy tính bảng iPad Pro M4 11 inch','Máy tính bảng iPad Pro M4 11 inch','Máy tính bảng iPad Pro M4 11 inch chính hãng giá tốt tại Tech Station','ipad-pro-m4-11'),
+(117,1,'Apple iPad Air M2 11-inch','<p><strong>iPad Air M2 11-inch</strong> is supercharged by the blazing-fast Apple M2 chip, a stunning Liquid Retina display, and a new landscape front camera perfect for FaceTime.</p>','Apple iPad Air M2 11-inch','Apple iPad Air M2 11-inch','Apple iPad Air M2 11-inch official at Tech Station','ipad-air-m2-11'),
+(117,2,'Máy tính bảng iPad Air M2 11 inch','<p><strong>iPad Air M2 11 inch</strong> kết hợp hoàn hảo giữa hiệu năng đỉnh cao của vi xử lý Apple M2, màn hình Liquid Retina tuyệt đẹp và camera trước đặt ngang thông minh cho cuộc gọi video tối ưu.</p>','Máy tính bảng iPad Air M2 11 inch','Máy tính bảng iPad Air M2 11 inch','Máy tính bảng iPad Air M2 11 inch chính hãng giá tốt tại Tech Station','ipad-air-m2-11'),
+(118,1,'Apple iPad 10th Gen 10.9-inch','<p><strong>iPad 10th Gen</strong> features an all-screen design with a 10.9-inch Liquid Retina display, A14 Bionic chip, versatile USB-C connectivity, and landscape 12MP front camera.</p>','Apple iPad 10th Gen 10.9-inch','Apple iPad 10th Gen 10.9-inch','Apple iPad 10th Gen 10.9-inch official at Tech Station','ipad-gen-10'),
+(118,2,'Máy tính bảng iPad Gen 10 10.9 inch','<p><strong>iPad Gen 10</strong> sở hữu thiết kế toàn màn hình rực rỡ sắc màu, chip A14 Bionic mạnh mẽ, cổng kết nối Type-C hiện đại cùng camera siêu rộng 12MP đặt ở cạnh ngang cực kỳ tiện lợi.</p>','Máy tính bảng iPad Gen 10 10.9 inch','Máy tính bảng iPad Gen 10 10.9 inch','Máy tính bảng iPad Gen 10 10.9 inch chính hãng giá tốt tại Tech Station','ipad-gen-10'),
+(119,1,'Lenovo Legion Y700 (Gen 2) Gaming Tablet','<p><strong>Lenovo Legion Y700 (Gen 2)</strong> is the ultimate compact gaming tablet featuring an 8.8-inch 144Hz 2.5K display, flagship Snapdragon 8+ Gen 1 processor, and dual USB-C ports.</p>','Lenovo Legion Y700 (Gen 2) Gaming Tablet','Lenovo Legion Y700 (Gen 2) Gaming Tablet','Lenovo Legion Y700 (Gen 2) Gaming Tablet official at Tech Station','lenovo-legion-y700-gen-2'),
+(119,2,'Máy tính bảng Lenovo Legion Y700 (Gen 2)','<p><strong>Lenovo Legion Y700 (Gen 2)</strong> là cỗ máy gaming tablet nhỏ gọn hàng đầu với màn hình 8.8 inch 144Hz 2.5K siêu mượt, chip Snapdragon 8+ Gen 1 mạnh mẽ và thiết kế tản nhiệt buồng hơi vượt trội.</p>','Máy tính bảng Lenovo Legion Y700 (Gen 2)','Máy tính bảng Lenovo Legion Y700 (Gen 2)','Máy tính bảng Lenovo Legion Y700 (Gen 2) chính hãng giá tốt tại Tech Station','lenovo-legion-y700-gen-2'),
+(120,1,'Lenovo Tab P12 Tablet','<p><strong>Lenovo Tab P12</strong> offers a giant 12.7-inch 3K display, quad JBL speakers with Dolby Atmos, and a huge 10,200 mAh battery for non-stop productivity and streaming.</p>','Lenovo Tab P12 Tablet','Lenovo Tab P12 Tablet','Lenovo Tab P12 Tablet official at Tech Station','lenovo-tab-p12'),
+(120,2,'Máy tính bảng Lenovo Tab P12','<p><strong>Lenovo Tab P12</strong> trang bị màn hình khủng 12.7 inch độ phân giải 3K siêu nét, hệ thống âm thanh 4 loa JBL cao cấp cùng thời lượng pin 10.200 mAh cho cả ngày làm việc và xem phim thư giãn.</p>','Máy tính bảng Lenovo Tab P12','Máy tính bảng Lenovo Tab P12','Máy tính bảng Lenovo Tab P12 chính hãng giá tốt tại Tech Station','lenovo-tab-p12'),
+(121,1,'Lenovo Tab M11 Tablet','<p><strong>Lenovo Tab M11</strong> is designed for smarter learning and entertainment with an 11-inch 90Hz display, Lenovo Tab Pen support, and quad Dolby Atmos speakers.</p>','Lenovo Tab M11 Tablet','Lenovo Tab M11 Tablet','Lenovo Tab M11 Tablet official at Tech Station','lenovo-tab-m11'),
+(121,2,'Máy tính bảng Lenovo Tab M11','<p><strong>Lenovo Tab M11</strong> là mẫu máy tính bảng học tập và giải trí thông minh cho học sinh sinh viên với màn hình 11 inch 90Hz, hỗ trợ bút cảm ứng Lenovo Tab Pen và 4 loa Dolby Atmos.</p>','Máy tính bảng Lenovo Tab M11','Máy tính bảng Lenovo Tab M11','Máy tính bảng Lenovo Tab M11 chính hãng giá tốt tại Tech Station','lenovo-tab-m11'),
+(122,1,'Xiaomi Pad 6S Pro 12.4 Tablet','<p><strong>Xiaomi Pad 6S Pro 12.4</strong> redefines flagship productivity with a 12.4-inch 3K 144Hz display in a 3:2 aspect ratio, Snapdragon 8 Gen 2 powerhouse, 120W HyperCharge, and Xiaomi HyperOS.</p>','Xiaomi Pad 6S Pro 12.4 Tablet','Xiaomi Pad 6S Pro 12.4 Tablet','Xiaomi Pad 6S Pro 12.4 Tablet official at Tech Station','xiaomi-pad-6s-pro'),
+(122,2,'Máy tính bảng Xiaomi Pad 6S Pro 12.4','<p><strong>Xiaomi Pad 6S Pro 12.4</strong> định hình tiêu chuẩn máy tính bảng cao cấp với màn hình 3K 144Hz tỷ lệ 3:2 năng suất, vi xử lý Snapdragon 8 Gen 2 cực mạnh, sạc siêu nhanh 120W HyperCharge và hệ điều hành Xiaomi HyperOS mượt mà.</p>','Máy tính bảng Xiaomi Pad 6S Pro 12.4','Máy tính bảng Xiaomi Pad 6S Pro 12.4','Máy tính bảng Xiaomi Pad 6S Pro 12.4 chính hãng giá tốt tại Tech Station','xiaomi-pad-6s-pro'),
+(123,1,'Xiaomi Pad 6 Tablet','<p><strong>Xiaomi Pad 6</strong> is the benchmark tablet in its class with a premium unibody metal design, crisp 11-inch WQHD+ 144Hz screen, and dependable Snapdragon 870 performance.</p>','Xiaomi Pad 6 Tablet','Xiaomi Pad 6 Tablet','Xiaomi Pad 6 Tablet official at Tech Station','xiaomi-pad-6'),
+(123,2,'Máy tính bảng Xiaomi Pad 6','<p><strong>Xiaomi Pad 6</strong> là chiếc máy tính bảng quốc dân trong phân khúc tầm trung với thiết kế kim loại nguyên khối sang trọng, màn hình 11 inch WQHD+ 144Hz siêu sắc nét và chip Snapdragon 870 bền bỉ.</p>','Máy tính bảng Xiaomi Pad 6','Máy tính bảng Xiaomi Pad 6','Máy tính bảng Xiaomi Pad 6 chính hãng giá tốt tại Tech Station','xiaomi-pad-6'),
+(124,1,'Xiaomi Redmi Pad Pro Tablet','<p><strong>Xiaomi Redmi Pad Pro</strong> delivers an immersive entertainment experience with a massive 12.1-inch 2.5K 120Hz display, Snapdragon 7s Gen 2 chipset, 10,000 mAh battery, and quad Dolby Atmos speakers.</p>','Xiaomi Redmi Pad Pro Tablet','Xiaomi Redmi Pad Pro Tablet','Xiaomi Redmi Pad Pro Tablet official at Tech Station','xiaomi-redmi-pad-pro'),
+(124,2,'Máy tính bảng Xiaomi Redmi Pad Pro','<p><strong>Xiaomi Redmi Pad Pro</strong> mang đến trải nghiệm màn hình rộng lớn 12.1 inch 2.5K 120Hz mượt mà, chip Snapdragon 7s Gen 2 thế hệ mới, pin khủng 10.000 mAh cùng hệ thống 4 loa Dolby Atmos đỉnh cao.</p>','Máy tính bảng Xiaomi Redmi Pad Pro','Máy tính bảng Xiaomi Redmi Pad Pro','Máy tính bảng Xiaomi Redmi Pad Pro chính hãng giá tốt tại Tech Station','xiaomi-redmi-pad-pro');
 /*!40000 ALTER TABLE `oc_product_description` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6375,7 +6639,7 @@ CREATE TABLE `oc_product_image` (
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`product_image_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2766 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=2845 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6436,12 +6700,6 @@ INSERT INTO `oc_product_image` VALUES
 (2405,31,'catalog/demo/nikon_d300_3.jpg',0),
 (2406,29,'catalog/demo/palm_treo_pro_2.jpg',0),
 (2407,29,'catalog/demo/palm_treo_pro_3.jpg',0),
-(2408,49,'catalog/demo/samsung_tab_2.jpg',0),
-(2409,49,'catalog/demo/samsung_tab_3.jpg',0),
-(2410,49,'catalog/demo/samsung_tab_4.jpg',0),
-(2411,49,'catalog/demo/samsung_tab_5.jpg',0),
-(2412,49,'catalog/demo/samsung_tab_6.jpg',0),
-(2413,49,'catalog/demo/samsung_tab_7.jpg',0),
 (2414,46,'catalog/demo/sony_vaio_3.jpg',0),
 (2415,46,'catalog/demo/sony_vaio_2.jpg',0),
 (2416,46,'catalog/demo/sony_vaio_4.jpg',0),
@@ -6565,7 +6823,66 @@ INSERT INTO `oc_product_image` VALUES
 (2762,51,'catalog/Sản phẩm/Lap/sp2/ssss_1__82 .png',0),
 (2763,51,'catalog/Sản phẩm/Lap/sp2/ssss_1__82 (7).webp',1),
 (2764,51,'catalog/Sản phẩm/Lap/sp2/ssss_1__82 (6).webp',2),
-(2765,51,'catalog/Sản phẩm/Lap/sp2/ssss_1__82 (5).webp',3);
+(2765,51,'catalog/Sản phẩm/Lap/sp2/ssss_1__82 (5).webp',3),
+(2768,97,'catalog/Sản phẩm/Chuột/sp4/chuot-choi-game-co-day-logitech-g102-lightsync-8000dpi-3.webp',0),
+(2769,97,'catalog/Sản phẩm/Chuột/sp4/logitech-g102-lightsync-rgb-white-1_eb113ff7e83b4289812fb9bff7034b4d_1.webp',1),
+(2774,99,'catalog/Sản phẩm/Chuột/sp5/logitech-g402-hyperion-fury-ultra-2.webp',0),
+(2775,99,'catalog/Sản phẩm/Chuột/sp5/logitech-g402-hyperion-fury-ultra-3.webp',1),
+(2778,98,'catalog/Sản phẩm/Chuột/sp5/_0001_screenshot_1_2.webp',0),
+(2779,98,'catalog/Sản phẩm/Chuột/sp5/_0000_vmi_ve3goqe2qg7jwdkewpaqlyummvrc.jpg',1),
+(2780,100,'catalog/Sản phẩm/Chuột/sp7/sg-11134201-7rffh-m3efjsh8q3h73f.webp',0),
+(2781,100,'catalog/Sản phẩm/Chuột/sp7/sg-11134201-7rfhx-m3efjstg8ahz4c.webp',1),
+(2788,105,'catalog/Sản phẩm/Chuột/sp9/rgr556_2_.webp',0),
+(2789,105,'catalog/Sản phẩm/Chuột/sp9/rgr556_3_.webp',1),
+(2790,102,'catalog/Sản phẩm/Chuột/sp8/12_37_1.webp',1),
+(2791,102,'catalog/Sản phẩm/Chuột/sp8/5_235.webp',2),
+(2792,102,'catalog/Sản phẩm/Chuột/sp8/3_319.webp',3),
+(2793,104,'catalog/Sản phẩm/Chuột/sp9/screenshot_30-removebg-preview.webp',0),
+(2794,104,'catalog/Sản phẩm/Chuột/sp9/screenshot_31-removebg-preview.webp',1),
+(2795,93,'catalog/Sản phẩm/tai nghe/baseus-encok-d02-pro/img_2.jpg',1),
+(2796,93,'catalog/Sản phẩm/tai nghe/baseus-encok-d02-pro/img_3.jpg',2),
+(2797,94,'catalog/Sản phẩm/tai nghe/sony-wh-ch520/img_2.jpg',1),
+(2798,94,'catalog/Sản phẩm/tai nghe/sony-wh-ch520/img_3.jpg',2),
+(2799,96,'catalog/Sản phẩm/tai nghe/jbl-tune-720bt/img_2.jpg',1),
+(2800,96,'catalog/Sản phẩm/tai nghe/jbl-tune-720bt/img_3.jpg',2),
+(2801,92,'catalog/Sản phẩm/tai nghe/remax-rm-510/img_2.jpg',1),
+(2802,92,'catalog/Sản phẩm/tai nghe/remax-rm-510/img_3.jpg',2),
+(2803,90,'catalog/Sản phẩm/tai nghe/asus-tuf-gaming-h1/img_2.jpg',1),
+(2804,90,'catalog/Sản phẩm/tai nghe/asus-tuf-gaming-h1/img_3.jpg',2),
+(2805,89,'catalog/Sản phẩm/tai nghe/hyperx-cloud-iii-wireless/img_2.jpg',1),
+(2806,89,'catalog/Sản phẩm/tai nghe/hyperx-cloud-iii-wireless/img_3.jpg',2),
+(2807,88,'catalog/Sản phẩm/tai nghe/logitech-g733-lightspeed/img_2.jpg',1),
+(2808,88,'catalog/Sản phẩm/tai nghe/logitech-g733-lightspeed/img_3.jpg',2),
+(2809,87,'catalog/Sản phẩm/tai nghe/razer-blackshark-v2-x/img_2.jpg',1),
+(2810,87,'catalog/Sản phẩm/tai nghe/razer-blackshark-v2-x/img_3.jpg',2),
+(2811,91,'catalog/Sản phẩm/tai nghe/steelseries-arctis-nova-pro/img_2.jpg',1),
+(2812,91,'catalog/Sản phẩm/tai nghe/steelseries-arctis-nova-pro/img_3.jpg',2),
+(2813,95,'catalog/Sản phẩm/tai nghe/haylou-gt1-pro/img_2.jpg',1),
+(2814,95,'catalog/Sản phẩm/tai nghe/haylou-gt1-pro/img_3.jpg',2),
+(2817,114,'catalog/Sản phẩm/May tinh bang/samsung-galaxy-tab-s9-fe-plus/img_2.jpg',1),
+(2818,114,'catalog/Sản phẩm/May tinh bang/samsung-galaxy-tab-s9-fe-plus/img_3.jpg',2),
+(2819,115,'catalog/Sản phẩm/May tinh bang/samsung-galaxy-tab-a9-plus/img_2.jpg',1),
+(2820,115,'catalog/Sản phẩm/May tinh bang/samsung-galaxy-tab-a9-plus/img_3.jpg',2),
+(2823,117,'catalog/Sản phẩm/May tinh bang/ipad-air-m2-11/img_2.jpg',1),
+(2824,117,'catalog/Sản phẩm/May tinh bang/ipad-air-m2-11/img_3.jpg',2),
+(2825,118,'catalog/Sản phẩm/May tinh bang/ipad-gen-10/img_2.jpg',1),
+(2826,118,'catalog/Sản phẩm/May tinh bang/ipad-gen-10/img_3.jpg',2),
+(2827,119,'catalog/Sản phẩm/May tinh bang/lenovo-legion-y700-gen-2/img_2.jpg',1),
+(2828,119,'catalog/Sản phẩm/May tinh bang/lenovo-legion-y700-gen-2/img_3.jpg',2),
+(2829,120,'catalog/Sản phẩm/May tinh bang/lenovo-tab-p12/img_2.jpg',1),
+(2830,120,'catalog/Sản phẩm/May tinh bang/lenovo-tab-p12/img_3.jpg',2),
+(2831,121,'catalog/Sản phẩm/May tinh bang/lenovo-tab-m11/img_2.jpg',1),
+(2832,121,'catalog/Sản phẩm/May tinh bang/lenovo-tab-m11/img_3.jpg',2),
+(2833,122,'catalog/Sản phẩm/May tinh bang/xiaomi-pad-6s-pro/img_2.jpg',1),
+(2834,122,'catalog/Sản phẩm/May tinh bang/xiaomi-pad-6s-pro/img_3.jpg',2),
+(2835,123,'catalog/Sản phẩm/May tinh bang/xiaomi-pad-6/img_2.jpg',1),
+(2836,123,'catalog/Sản phẩm/May tinh bang/xiaomi-pad-6/img_3.jpg',2),
+(2837,124,'catalog/Sản phẩm/May tinh bang/xiaomi-redmi-pad-pro/img_2.jpg',1),
+(2838,124,'catalog/Sản phẩm/May tinh bang/xiaomi-redmi-pad-pro/img_3.jpg',2),
+(2839,113,'catalog/Sản phẩm/May tinh bang/samsung-galaxy-tab-s10-ultra/may-tinh-bang-samsung-galaxy-tab-s10-plus-5g_2.webp',1),
+(2840,113,'catalog/Sản phẩm/May tinh bang/samsung-galaxy-tab-s10-ultra/may-tinh-bang-samsung-galaxy-tab-s10-plus-5g_5_-_sao_ch_p.webp',2),
+(2843,116,'catalog/Sản phẩm/May tinh bang/ipad-pro-m4-11/img_2.jpg',1),
+(2844,116,'catalog/Sản phẩm/May tinh bang/ipad-pro-m4-11/ipad-pro-m4-11-inch_10__5_1_1.webp',2);
 /*!40000 ALTER TABLE `oc_product_image` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6583,7 +6900,7 @@ CREATE TABLE `oc_product_option` (
   `value` text DEFAULT NULL,
   `required` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`product_option_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=269 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=285 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6632,7 +6949,22 @@ INSERT INTO `oc_product_option` VALUES
 (264,83,16,NULL,1),
 (266,84,16,NULL,1),
 (267,85,16,NULL,1),
-(268,86,16,NULL,1);
+(268,86,16,NULL,1),
+(270,97,16,NULL,1),
+(271,102,16,NULL,1),
+(272,104,16,NULL,1),
+(273,113,15,NULL,1),
+(274,114,15,'',1),
+(275,115,15,'',1),
+(276,116,15,NULL,1),
+(277,117,15,'',1),
+(278,118,15,'',1),
+(279,119,15,'',1),
+(280,120,15,'',1),
+(281,121,15,'',1),
+(282,122,15,'',1),
+(283,123,15,'',1),
+(284,124,15,'',1);
 /*!40000 ALTER TABLE `oc_product_option` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6658,7 +6990,7 @@ CREATE TABLE `oc_product_option_value` (
   `weight` decimal(15,8) DEFAULT NULL,
   `weight_prefix` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`product_option_value_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=168 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6761,7 +7093,37 @@ INSERT INTO `oc_product_option_value` VALUES
 (132,267,85,16,64,10,1,0.0000,'+',0,'+',0.00000000,'+'),
 (133,267,85,16,61,10,1,0.0000,'+',0,'+',0.00000000,'+'),
 (134,268,86,16,62,10,1,0.0000,'+',0,'+',0.00000000,'+'),
-(135,268,86,16,61,20,1,0.0000,'+',0,'+',0.00000000,'+');
+(135,268,86,16,61,20,1,0.0000,'+',0,'+',0.00000000,'+'),
+(138,270,97,16,61,25,1,0.0000,'+',0,'+',0.00000000,'+'),
+(139,270,97,16,62,25,1,0.0000,'+',0,'+',0.00000000,'+'),
+(140,271,102,16,62,20,1,0.0000,'+',0,'+',0.00000000,'+'),
+(141,271,102,16,61,20,1,0.0000,'+',0,'+',0.00000000,'+'),
+(142,272,104,16,65,10,1,0.0000,'+',0,'+',0.00000000,'+'),
+(143,272,104,16,61,25,1,0.0000,'+',0,'+',0.00000000,'+'),
+(144,273,113,15,58,100,1,0.0000,'+',0,'+',0.00000000,'+'),
+(145,273,113,15,59,100,1,3500000.0000,'+',35,'+',0.00000000,'+'),
+(146,273,113,15,60,100,1,8000000.0000,'+',80,'+',0.00000000,'+'),
+(147,274,114,15,57,100,1,0.0000,'+',0,'+',0.00000000,'+'),
+(148,274,114,15,58,100,1,2000000.0000,'+',20,'+',0.00000000,'+'),
+(149,275,115,15,57,100,1,1000000.0000,'+',10,'+',0.00000000,'+'),
+(150,276,116,15,58,100,1,0.0000,'+',0,'+',0.00000000,'+'),
+(151,276,116,15,59,100,1,5000000.0000,'+',50,'+',0.00000000,'+'),
+(152,276,116,15,60,100,1,12000000.0000,'+',120,'+',0.00000000,'+'),
+(153,277,117,15,57,100,1,0.0000,'+',0,'+',0.00000000,'+'),
+(154,277,117,15,58,100,1,2600000.0000,'+',26,'+',0.00000000,'+'),
+(155,277,117,15,59,100,1,7500000.0000,'+',75,'+',0.00000000,'+'),
+(156,278,118,15,58,100,1,3800000.0000,'+',38,'+',0.00000000,'+'),
+(157,279,119,15,58,100,1,0.0000,'+',0,'+',0.00000000,'+'),
+(158,279,119,15,59,100,1,1800000.0000,'+',18,'+',0.00000000,'+'),
+(159,280,120,15,57,100,1,0.0000,'+',0,'+',0.00000000,'+'),
+(160,280,120,15,58,100,1,1200000.0000,'+',12,'+',0.00000000,'+'),
+(161,281,121,15,57,100,1,700000.0000,'+',7,'+',0.00000000,'+'),
+(162,282,122,15,58,100,1,0.0000,'+',0,'+',0.00000000,'+'),
+(163,282,122,15,59,100,1,2000000.0000,'+',20,'+',0.00000000,'+'),
+(164,283,123,15,57,100,1,0.0000,'+',0,'+',0.00000000,'+'),
+(165,283,123,15,58,100,1,1000000.0000,'+',10,'+',0.00000000,'+'),
+(166,284,124,15,57,100,1,0.0000,'+',0,'+',0.00000000,'+'),
+(167,284,124,15,58,100,1,1000000.0000,'+',10,'+',0.00000000,'+');
 /*!40000 ALTER TABLE `oc_product_option_value` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6790,7 +7152,6 @@ INSERT INTO `oc_product_related` VALUES
 (41,42),
 (42,40),
 (42,41),
-(49,82),
 (50,51),
 (50,53),
 (50,54),
@@ -6943,7 +7304,6 @@ INSERT INTO `oc_product_related` VALUES
 (81,79),
 (81,80),
 (81,81),
-(82,49),
 (82,77),
 (82,79),
 (82,83),
@@ -7022,7 +7382,7 @@ CREATE TABLE `oc_product_reward` (
   `customer_group_id` int(11) DEFAULT 0,
   `points` int(8) DEFAULT 0,
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1331 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=1501 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -7039,7 +7399,6 @@ INSERT INTO `oc_product_reward` VALUES
 (551,43,1,600),
 (552,44,1,700),
 (553,45,1,800),
-(554,49,1,1000),
 (624,59,2,700),
 (625,59,3,750),
 (626,59,5,850),
@@ -7229,48 +7588,6 @@ INSERT INTO `oc_product_reward` VALUES
 (1109,95,5,48),
 (1110,96,3,55),
 (1111,96,5,55),
-(1123,97,1,4),
-(1124,97,3,4),
-(1125,98,1,8),
-(1126,98,3,8),
-(1127,99,1,6),
-(1128,99,3,6),
-(1129,100,1,15),
-(1130,100,3,15),
-(1133,102,1,24),
-(1134,102,3,24),
-(1137,104,1,5),
-(1138,104,3,5),
-(1139,105,1,13),
-(1140,105,3,13),
-(1154,97,2,14),
-(1155,98,2,18),
-(1156,99,2,16),
-(1157,100,2,25),
-(1159,102,2,34),
-(1161,104,2,15),
-(1162,105,2,23),
-(1169,97,4,24),
-(1170,98,4,28),
-(1171,99,4,26),
-(1172,100,4,35),
-(1174,102,4,44),
-(1176,104,4,25),
-(1177,105,4,33),
-(1184,97,3,34),
-(1185,97,5,34),
-(1186,98,3,38),
-(1187,98,5,38),
-(1188,99,3,36),
-(1189,99,5,36),
-(1190,100,3,45),
-(1191,100,5,45),
-(1194,102,3,54),
-(1195,102,5,54),
-(1198,104,3,35),
-(1199,104,5,35),
-(1200,105,3,43),
-(1201,105,5,43),
 (1259,108,2,299),
 (1260,108,3,319),
 (1261,108,5,319),
@@ -7322,7 +7639,126 @@ INSERT INTO `oc_product_reward` VALUES
 (1327,51,3,240),
 (1328,51,5,280),
 (1329,51,1,200),
-(1330,51,4,260);
+(1330,51,4,260),
+(1336,97,2,14),
+(1337,97,3,34),
+(1338,97,5,34),
+(1339,97,1,4),
+(1340,97,4,24),
+(1351,99,2,16),
+(1352,99,3,36),
+(1353,99,5,36),
+(1354,99,1,6),
+(1355,99,4,26),
+(1361,98,2,18),
+(1362,98,3,38),
+(1363,98,5,38),
+(1364,98,1,8),
+(1365,98,4,28),
+(1366,100,2,25),
+(1367,100,3,45),
+(1368,100,5,45),
+(1369,100,1,15),
+(1370,100,4,35),
+(1381,105,2,23),
+(1382,105,3,43),
+(1383,105,5,43),
+(1384,105,1,13),
+(1385,105,4,33),
+(1386,102,2,34),
+(1387,102,3,54),
+(1388,102,5,54),
+(1389,102,1,24),
+(1390,102,4,44),
+(1391,104,2,15),
+(1392,104,3,35),
+(1393,104,5,35),
+(1394,104,1,5),
+(1395,104,4,25),
+(1403,114,1,140),
+(1404,114,2,150),
+(1405,114,4,160),
+(1406,114,5,170),
+(1407,114,3,170),
+(1408,114,6,140),
+(1409,114,9,170),
+(1410,115,1,55),
+(1411,115,2,65),
+(1412,115,4,75),
+(1413,115,5,85),
+(1414,115,3,85),
+(1415,115,6,55),
+(1416,115,9,85),
+(1424,117,1,170),
+(1425,117,2,180),
+(1426,117,4,190),
+(1427,117,5,200),
+(1428,117,3,200),
+(1429,117,6,170),
+(1430,117,9,200),
+(1431,118,1,100),
+(1432,118,2,110),
+(1433,118,4,120),
+(1434,118,5,130),
+(1435,118,3,130),
+(1436,118,6,100),
+(1437,118,9,130),
+(1438,119,1,90),
+(1439,119,2,100),
+(1440,119,4,110),
+(1441,119,5,120),
+(1442,119,3,120),
+(1443,119,6,90),
+(1444,119,9,120),
+(1445,120,1,80),
+(1446,120,2,90),
+(1447,120,4,100),
+(1448,120,5,110),
+(1449,120,3,110),
+(1450,120,6,80),
+(1451,120,9,110),
+(1452,121,1,45),
+(1453,121,2,55),
+(1454,121,4,65),
+(1455,121,5,75),
+(1456,121,3,75),
+(1457,121,6,45),
+(1458,121,9,75),
+(1459,122,1,145),
+(1460,122,2,155),
+(1461,122,4,165),
+(1462,122,5,175),
+(1463,122,3,175),
+(1464,122,6,145),
+(1465,122,9,175),
+(1466,123,1,80),
+(1467,123,2,90),
+(1468,123,4,100),
+(1469,123,5,110),
+(1470,123,3,110),
+(1471,123,6,80),
+(1472,123,9,110),
+(1473,124,1,65),
+(1474,124,2,75),
+(1475,124,4,85),
+(1476,124,5,95),
+(1477,124,3,95),
+(1478,124,6,65),
+(1479,124,9,95),
+(1480,113,2,320),
+(1481,113,6,310),
+(1482,113,3,340),
+(1483,113,5,340),
+(1484,113,1,310),
+(1485,113,9,340),
+(1486,113,4,330),
+(1494,116,2,300),
+(1495,116,6,290),
+(1496,116,3,320),
+(1497,116,5,320),
+(1498,116,1,290),
+(1499,116,9,320),
+(1500,116,4,310);
 /*!40000 ALTER TABLE `oc_product_reward` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7403,9 +7839,6 @@ INSERT INTO `oc_product_to_category` VALUES
 (47,20),
 (48,20),
 (48,34),
-(49,57),
-(49,70),
-(49,71),
 (50,64),
 (50,66),
 (51,64),
@@ -7512,10 +7945,32 @@ INSERT INTO `oc_product_to_category` VALUES
 (109,69),
 (110,64),
 (110,69),
-(111,70),
-(111,74),
 (112,70),
-(112,72);
+(112,72),
+(113,70),
+(113,71),
+(114,70),
+(114,71),
+(115,70),
+(115,71),
+(116,70),
+(116,74),
+(117,70),
+(117,74),
+(118,70),
+(118,74),
+(119,70),
+(119,73),
+(120,70),
+(120,73),
+(121,70),
+(121,73),
+(122,70),
+(122,72),
+(123,70),
+(123,72),
+(124,70),
+(124,72);
 /*!40000 ALTER TABLE `oc_product_to_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7605,7 +8060,6 @@ INSERT INTO `oc_product_to_store` VALUES
 (46,0),
 (47,0),
 (48,0),
-(49,0),
 (50,0),
 (51,0),
 (53,0),
@@ -7659,8 +8113,19 @@ INSERT INTO `oc_product_to_store` VALUES
 (108,0),
 (109,0),
 (110,0),
-(111,0),
-(112,0);
+(112,0),
+(113,0),
+(114,0),
+(115,0),
+(116,0),
+(117,0),
+(118,0),
+(119,0),
+(120,0),
+(121,0),
+(122,0),
+(123,0),
+(124,0);
 /*!40000 ALTER TABLE `oc_product_to_store` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7904,7 +8369,7 @@ CREATE TABLE `oc_seo_url` (
   KEY `language` (`language_id`),
   KEY `keyword` (`keyword`),
   KEY `query` (`key`,`value`)
-) ENGINE=InnoDB AUTO_INCREMENT=841 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=917 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -7980,8 +8445,6 @@ INSERT INTO `oc_seo_url` VALUES
 (332,0,1,'product_id','29','palm-treo-pro',0),
 (333,0,2,'product_id','35','product-8',0),
 (334,0,1,'product_id','35','product-8',0),
-(335,0,2,'product_id','49','samsung-galaxy-tab-10-1',0),
-(336,0,1,'product_id','49','samsung-galaxy-tab-10-1',0),
 (337,0,2,'product_id','33','samsung-syncmaster-941bw',0),
 (338,0,1,'product_id','33','samsung-syncmaster-941bw',0),
 (339,0,2,'product_id','46','sony-vaio',0),
@@ -8211,7 +8674,65 @@ INSERT INTO `oc_seo_url` VALUES
 (837,0,2,'product_id','101','m65-rgb-elite-tunable-fps-gaming-mouse',0),
 (838,0,1,'product_id','101','m65-rgb-elite-tunable-fps-gaming-mouse',0),
 (839,0,2,'product_id','51','laptop-asus2',0),
-(840,0,1,'product_id','51','laptop-asus2',0);
+(840,0,1,'product_id','51','laptop-asus2',0),
+(843,0,2,'product_id','97','logitech-g102-lightsync',0),
+(844,0,1,'product_id','97','logitech-g102-lightsync',0),
+(849,0,2,'product_id','99','logitech-g402-hyperion-fury-ultra',0),
+(850,0,1,'product_id','99','logitech-g402-hyperion-fury-ultra',0),
+(853,0,2,'product_id','98','razer-deathadder-v2',0),
+(854,0,1,'product_id','98','razer-deathadder-v2',0),
+(855,0,2,'product_id','100','zowie-eSport-EC2-C',0),
+(856,0,1,'product_id','100','zowie-eSport-EC2-C',0),
+(861,0,2,'product_id','105','razer-pro-click-mini',0),
+(862,0,1,'product_id','105','razer-pro-click-mini',0),
+(863,0,2,'product_id','102','logitech-mx-master-3s',0),
+(864,0,1,'product_id','102','logitech-mx-master-3s',0),
+(865,0,2,'product_id','104','chuot-microsoft',0),
+(866,0,1,'product_id','104','microsoft-mouse',0),
+(867,0,1,'product_id','93','baseus-encok-d02-pro',0),
+(868,0,2,'product_id','93','baseus-encok-d02-pro',0),
+(869,0,1,'product_id','94','sony-wh-ch520',0),
+(870,0,2,'product_id','94','sony-wh-ch520',0),
+(871,0,1,'product_id','96','jbl-tune-720bt',0),
+(872,0,2,'product_id','96','jbl-tune-720bt',0),
+(873,0,1,'product_id','92','remax-rm-510',0),
+(874,0,2,'product_id','92','remax-rm-510',0),
+(875,0,1,'product_id','90','asus-tuf-gaming-h1',0),
+(876,0,2,'product_id','90','asus-tuf-gaming-h1',0),
+(877,0,1,'product_id','89','hyperx-cloud-iii-wireless',0),
+(878,0,2,'product_id','89','hyperx-cloud-iii-wireless',0),
+(879,0,1,'product_id','88','logitech-g733-lightspeed',0),
+(880,0,2,'product_id','88','logitech-g733-lightspeed',0),
+(881,0,1,'product_id','87','razer-blackshark-v2-x',0),
+(882,0,2,'product_id','87','razer-blackshark-v2-x',0),
+(883,0,1,'product_id','91','steelseries-arctis-nova-pro',0),
+(884,0,2,'product_id','91','steelseries-arctis-nova-pro',0),
+(885,0,1,'product_id','95','haylou-gt1-pro',0),
+(886,0,2,'product_id','95','haylou-gt1-pro',0),
+(889,0,1,'product_id','114','samsung-galaxy-tab-s9-fe-plus',0),
+(890,0,2,'product_id','114','samsung-galaxy-tab-s9-fe-plus',0),
+(891,0,1,'product_id','115','samsung-galaxy-tab-a9-plus',0),
+(892,0,2,'product_id','115','samsung-galaxy-tab-a9-plus',0),
+(895,0,1,'product_id','117','ipad-air-m2-11',0),
+(896,0,2,'product_id','117','ipad-air-m2-11',0),
+(897,0,1,'product_id','118','ipad-gen-10',0),
+(898,0,2,'product_id','118','ipad-gen-10',0),
+(899,0,1,'product_id','119','lenovo-legion-y700-gen-2',0),
+(900,0,2,'product_id','119','lenovo-legion-y700-gen-2',0),
+(901,0,1,'product_id','120','lenovo-tab-p12',0),
+(902,0,2,'product_id','120','lenovo-tab-p12',0),
+(903,0,1,'product_id','121','lenovo-tab-m11',0),
+(904,0,2,'product_id','121','lenovo-tab-m11',0),
+(905,0,1,'product_id','122','xiaomi-pad-6s-pro',0),
+(906,0,2,'product_id','122','xiaomi-pad-6s-pro',0),
+(907,0,1,'product_id','123','xiaomi-pad-6',0),
+(908,0,2,'product_id','123','xiaomi-pad-6',0),
+(909,0,1,'product_id','124','xiaomi-redmi-pad-pro',0),
+(910,0,2,'product_id','124','xiaomi-redmi-pad-pro',0),
+(911,0,2,'product_id','113','samsung-galaxy-tab-s10-ultra',0),
+(912,0,1,'product_id','113','samsung-galaxy-tab-s10-ultra',0),
+(915,0,2,'product_id','116','ipad-pro-m4-11',0),
+(916,0,1,'product_id','116','ipad-pro-m4-11',0);
 /*!40000 ALTER TABLE `oc_seo_url` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8238,12 +8759,22 @@ CREATE TABLE `oc_session` (
 LOCK TABLES `oc_session` WRITE;
 /*!40000 ALTER TABLE `oc_session` DISABLE KEYS */;
 INSERT INTO `oc_session` VALUES
-('4e991713697ed5b15280be9206','{\"currency\":\"vnd\"}','2026-11-10 03:11:09'),
-('50e1f961079b408e140ca3d3da','{\"currency\":\"vnd\",\"user_id\":\"1\",\"user_token\":\"f67dbc460c2cecac0fed16a3ebcf8427\",\"comment_token\":\"4b297dabedff70d23db81594ba2853a4\",\"customer_id\":\"9\",\"customer\":{\"customer_id\":\"9\",\"customer_group_id\":\"2\",\"firstname\":\"khach\",\"lastname\":\"bac\",\"email\":\"bac@gmail.com\",\"telephone\":\"\",\"custom_field\":[]},\"customer_token\":\"388ff3733d506904c1f87778af\",\"upload_token\":\"f48008dd9f762414fefeecb51d1d863b\",\"review_token\":\"a57788a6f90c3243c5c3feca2546b0c2\",\"shipping_address\":{\"zone\":\"Ho Chi Minh City\",\"zone_code\":\"HC\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"{firstname} {lastname}\\r\\n{company}\\r\\n{address_1}\\r\\n{address_2}\\r\\n{city}, {zone} {postcode}\\r\\n{country}\",\"custom_field\":[],\"address_id\":\"2\",\"customer_id\":\"9\",\"firstname\":\"Nguy\\u1ec5n\",\"lastname\":\"Nguy\\u1ec5n\",\"company\":\"\",\"address_1\":\"39\\/13\",\"address_2\":\"\",\"city\":\"H\\u1ed3 Ch\\u00ed Minh\",\"postcode\":\"61000\",\"country_id\":\"230\",\"zone_id\":\"3780\",\"default\":\"1\"}}','2026-11-10 03:46:44'),
-('5a088839cb42cb6da051ea3568','{\"currency\":\"vnd\"}','2026-11-10 03:41:53'),
-('87f00468041e04cfcd9caafbf7','{\"currency\":\"vnd\"}','2026-11-10 03:13:22'),
-('9d29110530bd7251ee0ebdada5','{\"currency\":\"vnd\"}','2026-11-10 03:41:01'),
-('d1781cc73badd244bdac6cf5de','{\"currency\":\"USD\"}','2026-11-10 03:42:41');
+('062fcd95e46741918126f4427e','{\"currency\":\"vnd\"}','2026-11-11 13:01:52'),
+('085d5f0ab9af262f8052945f35','{\"currency\":\"vnd\"}','2026-11-11 13:02:27'),
+('18e7a8e20468d1760bb7681e70','{\"currency\":\"vnd\",\"upload_token\":\"e7f879a0dcd6a4e32567fbbb66e61e5c\",\"review_token\":\"ed99f5754117991cf8f30cd8a657f6b0\"}','2026-11-11 13:04:46'),
+('28d66a92bc1b3983af161d3ece','{\"currency\":\"vnd\",\"upload_token\":\"9e16b804e3f9a4d7558648fbc846d6c0\",\"review_token\":\"021cb909d1698db4ebdf7736856dd8d0\"}','2026-11-11 13:04:17'),
+('50e1f961079b408e140ca3d3da','{\"currency\":\"vnd\",\"user_id\":\"1\",\"user_token\":\"881dbe38db22656087ff022669abb595\",\"comment_token\":\"376269d3a4008c1831037fce16c3aa93\",\"customer_id\":\"9\",\"customer\":{\"customer_id\":\"9\",\"customer_group_id\":\"2\",\"firstname\":\"khach\",\"lastname\":\"bac\",\"email\":\"bac@gmail.com\",\"telephone\":\"\",\"custom_field\":[]},\"customer_token\":\"388ff3733d506904c1f87778af\",\"upload_token\":\"f48008dd9f762414fefeecb51d1d863b\",\"review_token\":\"a57788a6f90c3243c5c3feca2546b0c2\",\"shipping_address\":{\"zone\":\"Ho Chi Minh City\",\"zone_code\":\"HC\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"{firstname} {lastname}\\r\\n{company}\\r\\n{address_1}\\r\\n{address_2}\\r\\n{city}, {zone} {postcode}\\r\\n{country}\",\"custom_field\":[],\"address_id\":\"2\",\"customer_id\":\"9\",\"firstname\":\"Nguy\\u1ec5n\",\"lastname\":\"Nguy\\u1ec5n\",\"company\":\"\",\"address_1\":\"39\\/13\",\"address_2\":\"\",\"city\":\"H\\u1ed3 Ch\\u00ed Minh\",\"postcode\":\"61000\",\"country_id\":\"230\",\"zone_id\":\"3780\",\"default\":\"1\"}}','2026-11-11 13:12:52'),
+('52d2b862b972796dc78a1d500c','{\"currency\":\"vnd\"}','2026-11-11 13:01:21'),
+('638df0c8472b375ccb2faf5236','{\"currency\":\"vnd\"}','2026-11-11 13:02:21'),
+('761ab0f1932a132ccbda42d2ad','{\"currency\":\"vnd\",\"upload_token\":\"b5fb85a37b884caa30cafbcb852cbae9\",\"review_token\":\"877bce138a6cb2de9283d7537df7a2f0\"}','2026-11-11 13:04:54'),
+('783127967b23d013bd27900148','{\"currency\":\"vnd\"}','2026-11-11 13:02:58'),
+('828852ea776c8a51219fe225ac','{\"currency\":\"vnd\"}','2026-11-11 13:01:13'),
+('83982d4d50395d5580be4f6904','{\"currency\":\"vnd\",\"upload_token\":\"91c3e55670dd3057e584d47de779d1ec\",\"review_token\":\"a3c4455fe07fd2a3ac0f63d20e8d0dc8\"}','2026-11-11 13:04:25'),
+('93b9111d801a8e0ec71117e48d','{\"currency\":\"vnd\"}','2026-11-11 13:01:28'),
+('c279207a7e1a2a66de255c465e','{\"currency\":\"vnd\"}','2026-11-11 13:02:40'),
+('c4593759be059936f56f657ca8','{\"currency\":\"vnd\"}','2026-11-11 13:03:15'),
+('f42c96415d6d8a3de747aa590a','{\"currency\":\"vnd\",\"upload_token\":\"50ff36c6e9c4cb6d8d13211f3f8da1f7\",\"review_token\":\"3c98ab33a465a356351d25d8932e4ac9\"}','2026-11-11 13:04:34'),
+('f5d378c2f46d5d4b0a0e8942c4','{\"currency\":\"vnd\"}','2026-11-11 13:03:06');
 /*!40000 ALTER TABLE `oc_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9338,7 +9869,7 @@ CREATE TABLE `oc_user_login` (
   `user_agent` varchar(255) DEFAULT NULL,
   `date_added` datetime DEFAULT NULL,
   PRIMARY KEY (`user_login_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -9390,7 +9921,12 @@ INSERT INTO `oc_user_login` VALUES
 (40,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-11-06 09:54:27'),
 (41,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-11-06 10:48:37'),
 (42,1,'113.161.95.21','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-11-06 11:26:15'),
-(43,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0','2026-11-09 09:17:22');
+(43,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0','2026-11-09 09:17:22'),
+(44,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0','2026-11-10 09:59:31'),
+(45,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0','2026-11-10 15:20:50'),
+(46,1,'172.20.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0','2026-11-10 17:30:42'),
+(47,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0','2026-11-10 19:23:09'),
+(48,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0','2026-11-10 19:44:37');
 /*!40000 ALTER TABLE `oc_user_login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -21877,4 +22413,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-11-09  3:51:00
+-- Dump completed on 2026-11-10 13:13:01
